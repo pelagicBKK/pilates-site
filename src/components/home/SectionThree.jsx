@@ -16,7 +16,7 @@ import stock2 from "../../images/avatars/mom-profile.jpg";
   export default function SectionThree(props) {
   return (
     <Fragment>
-      <div className="feature-box py-3 py-xl-5 " style={{  marginLeft:"200px", marginRight:"200px"}}> 
+      <div className="feature-box py-3 py-xl-5 " style={{  marginLeft:"100px", marginRight:"200px"}}> 
         <Container className="py-3 d-flex flex-wrap align-items-center "style={{ height:"350", marginLeft:"auto", marginRight:"auto"}}>
           <div className="py-0 py-xl-5" >
             <Grid container spacing={2}>

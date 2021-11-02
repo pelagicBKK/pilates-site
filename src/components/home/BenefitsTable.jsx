@@ -73,49 +73,49 @@ export default function BenefitsTable() {
     }
   ];
 
-  const chart35Options = {
-    stroke: {
-      curve: 'smooth',
-      width: [0, 4]
-    },
-    colors: ['#0abcce', '#060918'],
-    fill: {
-      opacity: 1
-    },
-    labels: [
-      '01 Jan 2001',
-      '02 Jan 2001',
-      '03 Jan 2001',
-      '04 Jan 2001',
-      '05 Jan 2001',
-      '06 Jan 2001',
-      '07 Jan 2001',
-      '08 Jan 2001',
-      '09 Jan 2001',
-      '10 Jan 2001',
-      '11 Jan 2001',
-      '12 Jan 2001'
-    ],
-    xaxis: {
-      type: 'datetime'
-    },
-    grid: {
-      strokeDashArray: '5',
-      borderColor: 'rgba(125, 138, 156, 0.3)'
-    }
-  };
-  const chart35Data = [
-    {
-      name: 'Income',
-      type: 'column',
-      data: [440, 505, 414, 671, 227, 413, 201, 352, 752, 320, 257, 160]
-    },
-    {
-      name: 'Expenses',
-      type: 'line',
-      data: [231, 442, 335, 227, 433, 222, 117, 316, 242, 252, 162, 176]
-    }
-  ];
+  // const chart35Options = {
+  //   stroke: {
+  //     curve: 'smooth',
+  //     width: [0, 4]
+  //   },
+  //   colors: ['#0abcce', '#060918'],
+  //   fill: {
+  //     opacity: 1
+  //   },
+  //   labels: [
+  //     '01 Jan 2001',
+  //     '02 Jan 2001',
+  //     '03 Jan 2001',
+  //     '04 Jan 2001',
+  //     '05 Jan 2001',
+  //     '06 Jan 2001',
+  //     '07 Jan 2001',
+  //     '08 Jan 2001',
+  //     '09 Jan 2001',
+  //     '10 Jan 2001',
+  //     '11 Jan 2001',
+  //     '12 Jan 2001'
+  //   ],
+  //   xaxis: {
+  //     type: 'datetime'
+  //   },
+  //   grid: {
+  //     strokeDashArray: '5',
+  //     borderColor: 'rgba(125, 138, 156, 0.3)'
+  //   }
+  // };
+  // const chart35Data = [
+  //   {
+  //     name: 'Income',
+  //     type: 'column',
+  //     data: [440, 505, 414, 671, 227, 413, 201, 352, 752, 320, 257, 160]
+  //   },
+  //   {
+  //     name: 'Expenses',
+  //     type: 'line',
+  //     data: [231, 442, 335, 227, 433, 222, 117, 316, 242, 252, 162, 176]
+  //   }
+  // ];
 
   return (
     <Fragment>

@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import "./Home.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SectionOne from "../components/home/SectionOne";
 import Lottie from 'react-lottie';
 import animationData from '../images/lotties/pilates-animation.json';
@@ -12,10 +11,7 @@ import {
   Grid,
   
   Container,
-  Card,
-  CardContent,
-  Button,
-  Tooltip,
+  
 } from "@material-ui/core";
 // import AddCircleTwoToneIcon from "@material-ui/icons/AddCircleTwoTone";
 // import svgImage2 from "../images/illustrations/pilates-reformer-silhouette-by-Vexels.svg";
@@ -75,7 +71,7 @@ export default function Home(props) {
                   </div>
                   <div className="text-black mt-3">
                     <h1 className="mb-4 text-center">
-                      Who Does Pilates?    
+                      Who Can Do Pilates?    
                       {/* <span className="text-black-50 pl-3">
                     <i class="fas fa-question"></i>
                       </span> */}
@@ -132,7 +128,9 @@ export default function Home(props) {
                           Send Feedback
                         </a>
                       </Button> */}
+                      
                     </div>
+                    
                   </div>
                 </Grid>
                 
@@ -140,21 +138,21 @@ export default function Home(props) {
                   item
                   xs={12}
                   lg={6}
-                  className="px-0 d-none d-md-flex align-items-center"
+                  className="px-0 d-none d-md-flex align-items-center">
                   
-                >
+               
                   {/* <img
                     alt="..."
                     className="w-100 mx-auto d-block img-fluid"
                     src={svgImage2}
                   /> */}
-                  <Lottie 
+                 <Lottie 
                   
 	    options={defaultOptions}
         height={500}
         width={650}
       />
-                </Grid>
+                </Grid> 
               </Grid>
             </Container>
          </div>

@@ -2,9 +2,7 @@ import React, { Fragment } from 'react';
 
 import { Grid, Card  } from '@material-ui/core';
 import BenefitsTable from "./BenefitsTable";
-// import svgImage10 from '../..//images/illustrations/projections.svg';
 
-// import Slider from 'react-slick';
 
 export default function Benefits() {
   return (
@@ -34,11 +32,7 @@ export default function Benefits() {
                   </p>
                 </div>
                 <div className="d-block mt-4">
-                  {/* <Slider
-                    slidesToShow={2}
-                    slidesToScroll={2}
-                    dots={true}
-                    className="slick-slider slick-slider-left"> */}
+              
                     <div>
                       <div className="feature-box pr-4">
                         <h3 className="font-size-lg font-weight-bold my-3">

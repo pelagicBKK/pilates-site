@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
 
-import { Grid, Card, Container  } from '@material-ui/core';
+import { Grid, Container  } from '@material-ui/core';
 import BenefitsTable from "./BenefitsTable";
 // import svgImage10 from '../..//images/illustrations/projections.svg';
 
-// import Slider from 'react-slick';
+
 
 export default function Benefits() {
   return (

@@ -9,6 +9,7 @@ import ContactUs from "./components/contact/ContactUsForm";
 import Blogs from "./components/blogs/Blogs";
 import Home from "./pages/Home";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import ScrollToTop from "./ScrollToTop";
 // import BenefitsTable from "./components/home/BenefitsTable";
 // import './base.scss';
 // import { library } from '@fortawesome/fontawesome-svg-core';
@@ -17,6 +18,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 function App() {
   return (
     <BrowserRouter>
+    <ScrollToTop>
       <CssBaseline />
       <SiteNav />
       <Switch>
@@ -38,6 +40,7 @@ function App() {
         </Route>
       </Switch>
       <Footer />
+      </ScrollToTop>
     </BrowserRouter>
   );
 }

@@ -10,15 +10,15 @@ import { Grid, Container, Card, } from "@material-ui/core";
 export default function SectionOne() {
   return (
     <Fragment>
-      <div className="feature-box py-3 py-xl-5">
+      <div className=" py-3 py-xl-5" >
         <Container className="py-3 py-xl-5">
-          <div className="py-0 py-xl-5" >
+          <div className="py-0 py-xl-5" style={{marginRight:125, marginLeft:125, width:"100%"}}  >
             <Grid container spacing={4}>
 
     
 
 
-              <Grid item xs={12} lg={6} className="d-flex align-items-center">
+              <Grid item xs={12} lg={5} className="d-flex align-items-center">
                 <Card className="p-3 shadow-lg p-3 mb-5 bg-white rounded"  >
                   <img
                     style={{
@@ -32,9 +32,9 @@ export default function SectionOne() {
                   />
                 </Card>
               </Grid>
-            <Grid item xs={12} lg={6}>
+            <Grid item xs={12} lg={5}>
                 <div className="py-0 py-xl-5">
-                  <div className="pl-0 pl-xl-5 text-center text-black">
+                  <div className="pl-0 pl-xl-5 text-center text-black" style= {{marginRight:"0px"}}>
                     <h1 className="display-3 mb-3 font-weight-bold">
                       My Story
                     </h1>

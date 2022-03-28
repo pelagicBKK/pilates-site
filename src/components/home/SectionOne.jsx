@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import firstImg from "../../images/stock-photos/woman-pilates-trainer.jpg";
+import firstImg from "../../images/mom/momPilatesReformer-1.jpg";
 import secondImg from "../../images/stock-photos/woman-doing-pilates-two.jpg";
 import SectionThree from "./SectionThree";
 
@@ -19,11 +19,12 @@ export default function SectionOne() {
 
 
               <Grid item xs={12} lg={6} className="d-flex align-items-center">
-                <Card className="p-3 shadow-lg p-3 mb-5 bg-white rounded">
+                <Card className="p-3 shadow-lg p-3 mb-5 bg-white rounded"  >
                   <img
                     style={{
                       border: "70px",
                       padding: "30px",
+                      
                     }}
                     alt="..."
                     className="img-fluid"

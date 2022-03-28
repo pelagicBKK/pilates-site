@@ -10,7 +10,8 @@ class SiteNav extends React.Component {
   render() {
     return (
       <header className="p-3 text-white"
-      style={{backgroundColor:"#e5e4e5", alignItems: "center", display: "flex", height:100}}>
+      // bg;#e5e4e5
+      style={{backgroundColor:"#fdfdfd", alignItems: "center", display: "flex", height:100}}>
         <div className="container" >
         
           <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start" >

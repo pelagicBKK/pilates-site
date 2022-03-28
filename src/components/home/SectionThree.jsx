@@ -16,16 +16,20 @@ import stock2 from "../../images/avatars/mom-profile.jpg";
   export default function SectionThree(props) {
   return (
     <Fragment>
-      <div className="feature-box py-3 py-xl-5 " style={{  marginLeft:"100px", marginRight:"200px"}}> 
-        <Container className="py-3 d-flex flex-wrap align-items-center "style={{ height:"350", marginLeft:"auto", marginRight:"auto"}}>
-          <div className="py-0 py-xl-5" >
+      {/* <div className="feature-box py-3 py-xl-5 " style={{  marginLeft:"100px", marginRight:"200px"}}>  */}
+        <Container className="py-3 d-flex flex-wrap align-items-center "style={{  marginLeft:"", marginRight:""}}>
+        <div style={{ marginRight:"150px", marginLeft:"150px",  }}>
+        {/* paddingRight:"30px", paddingLeft:"30px" */}
+          {/* <div className="py-0 py-xl-5" > */}
+
+            
             <Grid container spacing={2}>
 
     
 
 
               <Grid item xs={12} lg={6} className="d-flex align-items-center">
-                <Card className=" shadow-lg   bg-white rounded" 
+                <Card className="p-3 shadow-lg p-3 mb-5 bg-white rounded" style={{margin:35, paddingRight:15}}
                 >
 
                   {/* <img
@@ -40,10 +44,15 @@ import stock2 from "../../images/avatars/mom-profile.jpg";
 
                     <img
                       src={stock2}
-                      className=""
-                       style={{ border: "70px", width:500, height:450,
-                       padding: "50px",}}
-                      alt="..."
+                      className="img-fluid"
+                      style={{
+                        border: "70px",
+                        padding: "30px",
+                        width:"100%",
+                        height:"100%"
+                      }}
+                       alt="..."
+                       
                     />
                     {/* <div class="middle"></div> */}
 
@@ -87,13 +96,16 @@ import stock2 from "../../images/avatars/mom-profile.jpg";
               </Grid> 
             
             </Grid>
-          </div>
+         
+         
+          {/* </div> */}
 
           
+        </div>
         </Container>
        
       
-     </div> 
+  
     </Fragment>
   );
         }

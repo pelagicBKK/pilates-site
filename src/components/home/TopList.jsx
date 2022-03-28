@@ -55,7 +55,7 @@ export default function LivePreviewExample() {
                     <div className="d-flex align-items-center w-100">
                     
                       <div className="mr-3 "style={{paddingRight:25}}>
-                      <Card className="card-box  mb-4 " style={{width:50, height:50, backgroundColor:"#f5f5f5"}}>
+                      <Card className="card-box  mb-4 rounded " style={{width:50, height:50, backgroundColor:"#f5f5f5"}}>
                         <div className="bg-neutral-dark text-primary text-center font-size-xl d-60 rounded-sm">
                           <FontAwesomeIcon style={{marginTop:20,width:20, height:20, color:"#98d2f9"}} icon={['far', 'heart']} />
                         </div>

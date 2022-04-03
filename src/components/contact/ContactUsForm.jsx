@@ -49,6 +49,7 @@ class ContactUsForm extends React.Component {
 
      .then(() => {
       this.contactUsMessageSuccess()
+      this.props.history.push("/");
       
     
       
@@ -84,7 +85,7 @@ class ContactUsForm extends React.Component {
     });
     
     // 
-    window.location.reload(false);
+    // window.location.reload(false);
 
   };
 

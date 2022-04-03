@@ -70,8 +70,8 @@ export default function Home(props) {
                     </Tooltip> */}
                   </div>
                   <div className="text-black mt-3">
-                    <h1 className="mb-4 text-center">
-                      Who Can Do Pilates?    
+                    <h1 className="mb-4  text-center">
+                      Pilates    
                       {/* <span className="text-black-50 pl-3">
                     <i class="fas fa-question"></i>
                       </span> */}

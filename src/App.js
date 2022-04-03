@@ -5,11 +5,14 @@ import '@fortawesome/fontawesome-free/js/all.js';
 import SiteNav from "./components/SiteNav";
 import Footer from "./components/Footer";
 import Benefits1 from "./components/home/Benefits1";
-import ContactUs from "./components/contact/ContactUsForm";
+import ContactUsForm from "./components/contact/ContactUsForm";
 import Blogs from "./components/blogs/Blogs";
 import Home from "./pages/Home";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import ScrollToTop from "./ScrollToTop";
+
+
+ //import{ init } from '@emailjs/browser';
 // import BenefitsTable from "./components/home/BenefitsTable";
 // import './base.scss';
 // import { library } from '@fortawesome/fontawesome-svg-core';
@@ -33,7 +36,7 @@ function App() {
           <Benefits1 />
         </Route>
         <Route exact path="/contact">
-          <ContactUs />
+          <ContactUsForm />
         </Route>
         <Route exact path="/blogs">
           <Blogs />

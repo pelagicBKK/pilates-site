@@ -1,53 +1,108 @@
 import PropTypes from "prop-types";
-import { Button, Grid, TextField, Card } from "@material-ui/core";
+import { Button, Grid, TextField, Card  } from "@material-ui/core";
+ import { Formik, Form, ErrorMessage} from "formik"
+// import { toast } from "react-toastify";
 // import * as contactService from "@services/contactService";
-import { ErrorMessage, Form, Formik } from "formik";
+//  import { ErrorMessage,  } from "formik";
 import React from "react";
-// import swal from "sweetalert";
+import swal from "sweetalert";
 import "./ContactUsForm.css";
+
 import { ContactUsSchema } from "./contactUsValidationSchema";
-import { withRouter } from "react-router-dom";
+ import { withRouter } from "react-router-dom";
+// import emailjs from "emailjs-com";
+// import { useRef } from "react";
+import emailjs, { init } from "@emailjs/browser";
+
+
 
 // const _logger = debug.extend("ContactUsSection");
-
 class ContactUsForm extends React.Component {
-  // state = {
-  //   from: "",
-  //   subject: "",
-  //   body: "",
-  // };
+  state ={
+ 
+    clientName: "",
+    clientEmail: "",
+    message: "",
+  };
+// function ContactFunction() {
+//   init("w5or7cuUWHp15NNYc");
+  // const form = useRef();
 
-  handleSubmit = (values) => {
-    // _logger("values: " + values);
-    // contactService
-      // .addContactUsMessage(values)
-      // .then(this.contactUsMessageSuccess)
-      // .catch(this.contactUsMessageError);
+  handleChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+  
   };
 
-  // contactUsMessageSuccess = (response) => {
+  handleSubmit = (e) => {
+    console.log("form data", this.state);
+    e.preventDefault();
+
+  init("w5or7cuUWHp15NNYc");
+  
+    // e.preventDefault();
     
-  //   swal({
-  //     title: "Congratulations!",
-  //     text: "Successfully Sent Message!",
-  //     icon: "success",
-  //     timer: 2000,
-  //     button: false,
-  //   });
+      
+    
+   
+     emailjs.sendForm('service_h5avmqs','template_bp1ogo4', e.target,'w5or7cuUWHp15NNYc' ) 
+     
 
-  //   this.props.history.push("/");
-  // };
+     .then(() => {
+      this.contactUsMessageSuccess()
+      window.location.reload(false);
+    
+      
+    }) 
 
-  // contactUsMessageError = (errResponse) => {
-  //   // _logger({ errResponse }, "contactUsMessageError");
-  //   swal({
-  //     title: "Contact Message failed",
-  //     text: "Make sure all fields are filled correctly!",
-  //     icon: "error",
-  //     timer: 2000,
-  //     button: false,
-  //   });
-  // };
+
+    .catch((err) => {
+      
+      this.contactUsMessageError();
+     
+    });
+      
+      
+   
+     
+ 
+    
+      // e.target.reset()
+     
+  
+    
+};
+
+ contactUsMessageSuccess = () => {
+    
+    swal({
+      title: "Congratulations!",
+      text: "Successfully Sent Message!",
+      icon: "success",
+      timer: 2000,
+      button: false,
+      
+    });
+    
+    // 
+
+
+  };
+
+contactUsMessageError = () => {
+   
+    swal({
+      title: "Contact Message failed",
+      text: "Make sure all fields are filled correctly!",
+      icon: "error",
+      timer: 2000,
+      button: false,
+    });
+  };
+
+
+
+  
+ 
 
   render() {
     const renderError = (message) => <p style={{ color: "red" }}>{message}</p>;
@@ -61,57 +116,60 @@ class ContactUsForm extends React.Component {
             <p className="font-size-lg mb-4 text-black-50"></p>
             <div>
               <Formik
-                enableReinitialize={true}
-                // initialValues={this.state}
-                onSubmit={this.handleSubmit}
-                validationSchema={ContactUsSchema}
+                // enableReinitialize={true}
+                  // initialValues={this.state}
+                // onSubmit={this.handleSubmit}
+             validationSchema={ContactUsSchema}
               >
-                {({ values, handleChange }) => (
-                  <Form>
+                {/* {({ values, handleChange }) => ( */}
+                 <Form onSubmit={this.handleSubmit}>
                     <Grid container spacing={4}>
                       <Grid xs={12} sm={12} item>
                         <TextField
                           fullWidth
-                          label="Email"
-                          id="from"
-                          name="from"
+                          label="Name"
+                          id="clientName"
+                          name="clientName"
                           className="mt-0"
                           variant="outlined"
-                          // value={values.from}
-                          onChange={handleChange}
-                          type="email"
+                          required="required"
+                          value={this.state.clientName}
+                          onChange={this.handleChange}
+                          type="text"
                         />
-                        <ErrorMessage name="from" render={renderError} />
+                        <ErrorMessage name="clientName" render={renderError} />
                       </Grid>
                       <Grid xs={12} sm={12} item>
                         <TextField
                           fullWidth
-                          label="Subject"
-                          id="subject"
-                          name="subject"
+                          label="Email"
+                          id="clientEmail"
+                          name="clientEmail"
                           className="mt-0"
                           variant="outlined"
-                          // value={values.subject}
-                          onChange={handleChange}
-                          type="text"
+                          required="required"
+                          value={this.state.clientEmail}
+                          onChange={this.handleChange}
+                          type="email"
                         />
-                        <ErrorMessage name="subject" render={renderError} />
+                        <ErrorMessage name="clientEmail" render={renderError} />
                       </Grid>
                       <Grid xs={12} sm={12} item>
                         <TextField
                           fullWidth
                           multiline={true}
-                          label="Body"
-                          id="body"
-                          name="body"
+                          label="Message"
+                          id="message"
+                          name="message"
                           className="mt-0"
                           variant="outlined"
+                          required="required"
                           rows={5}
-                          // value={values.body}
-                          onChange={handleChange}
+                          value={this.state.message}
+                          onChange={this.handleChange}
                           type="text"
                         />
-                        <ErrorMessage name="body" render={renderError} />
+                        <ErrorMessage name="message" render={renderError} />
                       </Grid>
                       <Grid xs={12} sm={12} item>
                         <Button
@@ -126,7 +184,7 @@ class ContactUsForm extends React.Component {
                       </Grid>
                     </Grid>
                   </Form>
-                )}
+               
               </Formik>
             </div>
             <small className="d-block text-black-50 pt-3"></small>

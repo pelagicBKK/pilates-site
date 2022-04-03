@@ -1,9 +1,9 @@
 import * as Yup from "yup";
 
 const ContactUsSchema = Yup.object().shape({
-  from: Yup.string().required("Email is required"),
-  subject: Yup.string().required("Subject is required"),
-  body: Yup.string().trim().required("Body is required"),
+  clientName: Yup.string().required("Name is required"),
+  clientEmail: Yup.string().required("Email is required"),
+  message: Yup.string().trim().required("Message is required"),
 });
 
 export { ContactUsSchema };

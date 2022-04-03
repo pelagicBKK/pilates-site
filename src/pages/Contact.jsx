@@ -5,7 +5,7 @@ import ContactUsForm from "../components/contact/ContactUsForm";
 
 
 
-export default function ContactUs(contact) {
+export default function ContactUs() {
  
   return (
     <Fragment>

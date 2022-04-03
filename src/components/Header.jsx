@@ -43,6 +43,7 @@ const LivePreviewExample = () => {
                 <img
                   alt="Carolina React Admin Dashboard with Material-UI PRO"
                   src={projectLogo}
+                  style={{width:"100", height:"100"}}
                 />
               </i>
               <span>Carolina</span>

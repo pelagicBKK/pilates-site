@@ -64,7 +64,7 @@ import stock2 from "../../images/avatars/mom-profile.jpg";
             <Grid item xs={12} lg={6} >
                 <div className="py-0 py-xl-5 ">
                   <div className="pl-0 pl-xl-5 text-center text-black ">
-                  <h3 className="display-4 my-3 font-weight-bold ">Who Is the Instructor?</h3>
+                  <h3 className="display-5 my-3 font-weight-bold ">Who Is the Instructor?</h3>
             <blockquote className="blockquote mb-0">
               <p className="font-size-lg ">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. 

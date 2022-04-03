@@ -35,9 +35,9 @@ export default function SectionOne() {
             <Grid item xs={12} lg={5}>
                 <div className="py-0 py-xl-5">
                   <div className="pl-0 pl-xl-5 text-center text-black" style= {{marginRight:"0px"}}>
-                    <h1 className="display-3 mb-3 font-weight-bold">
+                    <h2 className=" display-5 mb-3 font-weight-bold">
                       My Story
-                    </h1>
+                    </h2>
                     <blockquote className="blockquote ">
                       <p className="font-size-lg ">
                    
@@ -69,7 +69,7 @@ export default function SectionOne() {
               <Grid item xs={12} lg={6}>
                 <div className="py-0 py-xl-5">
                   <div className="pl-0 pl-xl-5 text-center text-black">
-                    <h1 className="display-3 mb-3 font-weight-bold">
+                    <h1 className="display-5 mb-3 font-weight-bold">
                       Mission
                     </h1>
                     <blockquote className="blockquote ">

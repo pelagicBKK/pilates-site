@@ -5,7 +5,7 @@ import Blogs from "../components/blogs/Blogs";
 
 
 
-export default function ContactUs(props) {
+export default function BlogsPage(props) {
  
   return (
     <Fragment>

@@ -49,7 +49,7 @@ class ContactUsForm extends React.Component {
 
      .then(() => {
       this.contactUsMessageSuccess()
-      window.location.reload(false);
+      
     
       
     }) 
@@ -84,7 +84,7 @@ class ContactUsForm extends React.Component {
     });
     
     // 
-
+    window.location.reload(false);
 
   };
 

@@ -2,6 +2,12 @@ import React, { Fragment } from 'react';
 // import hero6 from "../images/hero-bg/hero-6.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./Footer.css";
+import { useState } from 'react'
+import db from './firebase'
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
+import swal from "sweetalert";
 
 import {
   Grid,
@@ -14,12 +20,74 @@ import {
   List,
   ListItem,
   Tooltip,
-  TextField
+  // TextField
 } from '@material-ui/core';
 
 import MailOutlineTwoToneIcon from '@material-ui/icons/MailOutlineTwoTone';
 
 export default function Footer() {
+  
+  const contactUsMessageSuccess = ()  => {
+    
+    swal({
+      title: "Congratulations!",
+      text: "Successfully Signed up for Newsletter!",
+      icon: "success",
+      timer: 2000,
+      button: false,
+      
+    });
+    
+    // 
+    // window.location.reload(false);
+
+  };
+
+const contactUsMessageError = () => {
+   
+    swal({
+      title: "Contact Message failed",
+      text: "Make sure all fields are filled correctly!",
+      icon: "error",
+      timer: 2000,
+      button: false,
+    });
+  };
+
+  const [input, setInput] = useState("");
+  const inputHandler = (e) => {
+    setInput(e.target.value);
+  }
+  const submitHandler = (e)  =>{
+    e.preventDefault();
+    if(input){
+      console.log(input);
+      // add to firebase
+      db.collection("emails").add({
+      email: input,
+      time: firebase.firestore.FieldValue.serverTimestamp(),
+      })
+      .then(() => {
+        contactUsMessageSuccess()
+        e.target.reset()
+       
+        
+      
+        
+      }) 
+  
+  
+      .catch((err) => {
+        
+        contactUsMessageError();
+       
+      });
+      
+    
+      // setInput("");
+    }
+    
+  };
   return (
     <Fragment>
       <div className="bg-first py-5"
@@ -208,14 +276,18 @@ export default function Footer() {
                         demoralized.
                       </p>
                       <div>
-                        <form>
+                        <form onSubmit={submitHandler}>
                           <Grid container spacing={4}>
                             <Grid sm={8} item>
-                              <TextField
+                              <input
                                 fullWidth
                                 className="mt-0"
                                 margin="dense"
                                 variant="outlined"
+                                type="email"
+                                onChange={inputHandler}
+                                name="email"
+                                required="required"
                                 InputProps={{
                                   startAdornment: (
                                     <InputAdornment position="start">
@@ -227,6 +299,7 @@ export default function Footer() {
                             </Grid>
                             <Grid sm={4} item>
                               <Button
+                                type="submit"
                                 variant="contained"
                                 size="large"
                                 className="w-100"

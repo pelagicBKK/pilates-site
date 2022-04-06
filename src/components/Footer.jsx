@@ -3,7 +3,7 @@ import React, { Fragment } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./Footer.css";
 import { useState } from 'react'
-import db from './firebase'
+import db from '../firebase-config'
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';

@@ -62,10 +62,19 @@ class SiteNav extends React.Component {
               <li>
                 <Link
                   to="contact"
-                  className="nav-link px-2 text-white link-button"
+                  className="nav-link px-2 text-blue link-button"
                   // onClick={this.pushTech}
                 >
                   Contact
+                </Link>
+              </li> 
+              <li>
+                <Link
+                  to="login"
+                  className="nav-link px-2 text-blue link-button"
+                  // onClick={this.pushTech}
+                >
+                  Login
                 </Link>
               </li> 
            

@@ -1,9 +1,10 @@
-import { BrowserRouter, Route, Switch} from "react-router-dom";
+import { BrowserRouter, Route, Switch, } from "react-router-dom";
 import "./App.css";
+// import {  Button } from '@material-ui/core'
 // import PerfectScrollbar from 'react-perfect-scrollbar';
 import '@fortawesome/fontawesome-free/js/all.js';
 import SiteNav from "./components/SiteNav";
-import SiteNavLogin from "./components/SiteNavLogin";
+//  import SiteNavLogin from "./components/SiteNavLogin";
 import Footer from "./components/Footer";
 import Benefits1 from "./components/home/Benefits1";
 import ContactUsForm from "./components/contact/ContactUsForm";
@@ -13,7 +14,7 @@ import CreatePost from "./pages/CreatePost";
 import Login from "./pages/Login";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import ScrollToTop from "./ScrollToTop";
-import { useState } from "react"
+ import { useState } from "react"
 
 import {signOut} from "firebase/auth"
 
@@ -27,7 +28,7 @@ import {auth} from "./firebase-config"
 // import HomeContent from "./components/HomeContent";
 
 function App() {
-  
+
   const [isAuth,setIsAuth ] = useState(false);
 
   const signUserOut =() =>{
@@ -42,9 +43,27 @@ function App() {
     <BrowserRouter>
     <ScrollToTop>
       <CssBaseline />
+      {/* <SiteNav /> */}
        {!isAuth ?
-        <SiteNav/> : <SiteNavLogin />}
-       
+        <SiteNav/> : <button onClick={signUserOut}/> 
+         
+        //   <Link
+        //     to="/blogs"
+        //     className="nav-link px-2 text-secondary link-button"
+        //     // onClick={this.pushFriends}
+        //   >
+        //     Blog
+        //   </Link>
+        //   &&
+        //   <Link
+        //   to="login"
+        //   className="nav-link px-2 text-blue link-button"
+        //   // onClick={this.pushTech}
+        // >
+        //   Login
+        // </Link>
+          }
+
       {/* {isAuth &&<SiteNavLogin />}  */}
       <Switch>
         <Route exact path="/">

@@ -13,11 +13,11 @@ function Login({setIsAuth}) {
   const signInWithGoogle = () => {
     signInWithPopup(auth, provider)
     .then(() => {
-      localStorage.setItem("isAuth", true)
+      localStorage.setItem("isAuth", true);
         setIsAuth(true)
         history.push("/");
     });
-  
+
   };
   return (
   

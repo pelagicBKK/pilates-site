@@ -1,13 +1,29 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
+// import { useState } from "react"
+
+// import {signOut} from "firebase/auth"
+
+// import {auth} from "../firebase-config"
 
 
 
-class SiteNav extends React.Component {
+
+function SiteNavLogin (){
   // onItemClicked = () => {};
 
-  render() {
+ 
+  // const [ setIsAuth]  = useState(false);
+
+  // const signUserOut =() =>{
+  //     signOut(auth)
+  //     .then(() => {
+  //       localStorage.clear();
+  //       setIsAuth(false);
+  //       window.location.pathway = "/login"
+  //     })
+  // }
     return (
       <header className="p-3 "
       // bg;#e5e4e5
@@ -56,7 +72,7 @@ class SiteNav extends React.Component {
                 <Link
                   to="logout"
                   className="nav-link px-2 text-blue link-button"
-                 onClick={this.pushTech}
+                  // onClick={signUserOut}
                 >
                   Log Out
                 </Link>
@@ -93,6 +109,7 @@ class SiteNav extends React.Component {
       </header>
     ); // multi-line expression wrapp in ()
   }
-}
 
-export default SiteNav;
+
+
+export default SiteNavLogin();

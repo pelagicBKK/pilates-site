@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter, Route, Switch, } from "react-router-dom";
 import "./App.css";
 // import {  Button } from '@material-ui/core'
 // import PerfectScrollbar from 'react-perfect-scrollbar';
@@ -12,7 +12,7 @@ import Blogs from "./components/blogs/Blogs";
 import Home from "./pages/Home";
 import CreatePost from "./pages/CreatePost";
 import Login from "./pages/Login";
-import CssBaseline from "@material-ui/core/CssBaseline";
+// import CssBaseline from "@material-ui/core/CssBaseline";
 import ScrollToTop from "./ScrollToTop";
  import { useState } from "react"
 
@@ -71,7 +71,7 @@ function App() {
         <Route exact path="/study">
           <Benefits1 />
         </Route>
-        <Route exact path="/Create Post">
+        <Route exact path="/CreatePost">
          
           <CreatePost />
         </Route>

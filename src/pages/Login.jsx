@@ -53,8 +53,8 @@ function Login({setIsAuth}) {
               </p>
               <Button
                           // variant="contained"
-                         size="med"
-                          className="login-google"
+                         
+                          className="login-with-google-btn"
                           onClick={signInWithGoogle}
                           color="primary"
                           type="submit"

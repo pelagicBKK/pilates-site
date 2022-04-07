@@ -1,10 +1,10 @@
-import { BrowserRouter, Route, Switch, } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 import "./App.css";
 // import {  Button } from '@material-ui/core'
 // import PerfectScrollbar from 'react-perfect-scrollbar';
 import '@fortawesome/fontawesome-free/js/all.js';
 import SiteNav from "./components/SiteNav";
-//  import SiteNavLogin from "./components/SiteNavLogin";
+ import SiteNavLogin from "./components/SiteNavLogin";
 import Footer from "./components/Footer";
 import Benefits1 from "./components/home/Benefits1";
 import ContactUsForm from "./components/contact/ContactUsForm";
@@ -16,9 +16,10 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import ScrollToTop from "./ScrollToTop";
  import { useState } from "react"
 
-import {signOut} from "firebase/auth"
+// import {signOut} from "firebase/auth"
 
-import {auth} from "./firebase-config"
+//  import {auth} from "./firebase-config"
+// import { Navbar } from "react-bootstrap";
 
 
  //import{ init } from '@emailjs/browser';
@@ -29,40 +30,34 @@ import {auth} from "./firebase-config"
 
 function App() {
 
-  const [isAuth,setIsAuth ] = useState(false);
+  const [isAuth,setIsAuth, ] = useState(false);
+  
 
-  const signUserOut =() =>{
-      signOut(auth)
-      .then(() => {
-        localStorage.clear();
-        setIsAuth(false);
-        window.location.pathway = "/login"
-      })
-  }
+  // const signUserOut =() =>{
+  //     signOut(auth)
+  //     .then(() => {
+  //       localStorage.clear();
+  //       setIsAuth(false);
+  //       window.location.pathway = "/login"
+  //     })
+  // }
   return (
     <BrowserRouter>
     <ScrollToTop>
-      <CssBaseline />
-      {/* <SiteNav /> */}
-       {!isAuth ?
-        <SiteNav/> : <button onClick={signUserOut}/> 
+     {/* <nav> */}
+       {/* <Link to="/">Home</Link>
+       <Link to="/CreatePost">Create Post</Link> */}
+     {/* </nav> */}
+      {/* <SiteNavLogin /> */}
+       {/* {!isAuth ?
+        <SiteNav/> : <button onClick={signUserOut}/>}  */}
+        {/* {!isAuth ? <SiteNav/> : <SiteNavLogin/>} */}
          
-        //   <Link
-        //     to="/blogs"
-        //     className="nav-link px-2 text-secondary link-button"
-        //     // onClick={this.pushFriends}
-        //   >
-        //     Blog
-        //   </Link>
-        //   &&
-        //   <Link
-        //   to="login"
-        //   className="nav-link px-2 text-blue link-button"
-        //   // onClick={this.pushTech}
-        // >
-        //   Login
-        // </Link>
-          }
+     {/* {!isAuth ?
+        <SiteNav /> :   <button onClick={signUserOut} /> }  */}
+           {isAuth ?
+       <SiteNavLogin setIsAuth={setIsAuth} />   :   <SiteNav /> }
+         
 
       {/* {isAuth &&<SiteNavLogin />}  */}
       <Switch>
@@ -77,6 +72,7 @@ function App() {
           <Benefits1 />
         </Route>
         <Route exact path="/Create Post">
+         
           <CreatePost />
         </Route>
         <Route exact path="/Login">

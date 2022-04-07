@@ -1,29 +1,31 @@
 import React from "react";
-
+import "../App.js";
 import { Link } from "react-router-dom";
 // import { useState } from "react"
 
-// import {signOut} from "firebase/auth"
+import {signOut} from "firebase/auth"
 
-// import {auth} from "../firebase-config"
-
-
+import {auth} from "../firebase-config"
 
 
-function SiteNavLogin (){
-  // onItemClicked = () => {};
 
+
+function SiteNavLogin ({setIsAuth}){
+  
+  
  
-  // const [ setIsAuth]  = useState(false);
 
-  // const signUserOut =() =>{
-  //     signOut(auth)
-  //     .then(() => {
-  //       localStorage.clear();
-  //       setIsAuth(false);
-  //       window.location.pathway = "/login"
-  //     })
-  // }
+   
+    
+
+  const signUserOut =() =>{
+    signOut(auth)
+    .then(() => {
+      localStorage.clear();
+      setIsAuth(false);
+      // window.location.pathway = "/login"
+    })
+}
     return (
       <header className="p-3 "
       // bg;#e5e4e5
@@ -54,7 +56,7 @@ function SiteNavLogin (){
                   className="nav-link px-2 text-secondary link-button onClick"
                   // onClick={this.pushHome}
                 >
-                  Home
+                  Home 
                 </Link>
               </li> 
                <li>
@@ -69,13 +71,16 @@ function SiteNavLogin (){
              
            
               <li>
-                <Link
-                  to="logout"
-                  className="nav-link px-2 text-blue link-button"
-                  // onClick={signUserOut}
-                >
-                  Log Out
-                </Link>
+              <button
+                          // variant="contained"
+                         size="med"
+                          className="logout-google"
+                          onClick={signUserOut}
+                          color="primary"
+                          type="submit"
+                        >
+                          <span className="btn-wrapper--label">Sign Out</span>
+                        </button>
               </li> 
               <li>
                 <Link
@@ -112,4 +117,4 @@ function SiteNavLogin (){
 
 
 
-export default SiteNavLogin();
+export default SiteNavLogin;

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 
 class SiteNav extends React.Component {
-  onItemClicked = () => {};
+  // onItemClicked = () => {};
 
   render() {
     return (

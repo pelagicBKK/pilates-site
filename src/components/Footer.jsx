@@ -3,12 +3,12 @@ import React, { Fragment } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./Footer.css";
 import { useState } from 'react'
-import db from '../firebase-config'
+import {db} from '../firebase-config'
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 import swal from "sweetalert";
-
+import { useHistory } from "react-router-dom"
 import {
   Grid,
   Container,
@@ -26,8 +26,9 @@ import {
 import MailOutlineTwoToneIcon from '@material-ui/icons/MailOutlineTwoTone';
 
 export default function Footer() {
-  
+  const history = useHistory();
   const contactUsMessageSuccess = ()  => {
+   
     
     swal({
       title: "Congratulations!",
@@ -69,7 +70,7 @@ const contactUsMessageError = () => {
       })
       .then(() => {
         contactUsMessageSuccess()
-        e.target.reset()
+        history.push("/");
        
         
       

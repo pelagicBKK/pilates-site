@@ -5,17 +5,22 @@
 } */
 
 .btn-image {
-  background: url('http://speechpathconsulting.com/wp-content/uploads/2022/04/google-icon.jpg') no-repeat  ;
-  width: 45px;
-  height: 43px;
-  /* margin-left: 10; */
+  background: url('http://speechpathconsulting.com/wp-content/uploads/2022/04/button-google-word-trim-removebg-preview-e1649450066181.png') no-repeat  ;
+  background-position: center center;
+  
+  
 }
 
-.btn-outline-success:hover {
-  color: #f0eb6e;
-  background-color: #38e896;
-  border-color: #0f3d1c;
-}
+/* .btn-image :hover {
+  /* color: #f0eb6e; */
+  /* background: url('http://speechpathconsulting.com/wp-content/uploads/2022/04/button-google-word-trim-removebg-preview.png') no-repeat  ; */
+  /* background-color: #38e896; */
+  /* border-color: #3d390f; */
+  /* background-position: center center;
+  
+  
+  
+} */ 
 
 /* .btn-md {
   padding: 10px 16px;

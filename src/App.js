@@ -11,7 +11,7 @@ import ContactUsForm from "./components/contact/ContactUsForm";
 import Blogs from "./components/blogs/Blogs";
 import Home from "./pages/Home";
 import CreatePost from "./pages/CreatePost";
-import Login from "./pages/Login";
+// import Login from "./pages/Login";
 // import CssBaseline from "@material-ui/core/CssBaseline";
 import ScrollToTop from "./ScrollToTop";
  import { useState } from "react"
@@ -56,7 +56,7 @@ function App() {
      {/* {!isAuth ?
         <SiteNav /> :   <button onClick={signUserOut} /> }  */}
            {isAuth ?
-       <SiteNavLogin setIsAuth={setIsAuth} />   :   <SiteNav /> }
+       <SiteNavLogin setIsAuth={setIsAuth} />   :   <SiteNav setIsAuth={setIsAuth}/> }
          
 
       {/* {isAuth &&<SiteNavLogin />}  */}
@@ -75,9 +75,9 @@ function App() {
          
           <CreatePost isAuth={isAuth} />
         </Route>
-        <Route exact path="/Login">
+        {/* <Route exact path="/Login">
           <Login setIsAuth={setIsAuth}/>
-        </Route>
+        </Route> */}
         <Route exact path="/contact">
           <ContactUsForm />
         </Route>

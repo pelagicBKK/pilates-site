@@ -1,13 +1,26 @@
 import React from "react";
-
+// import { Button } from '@material-ui/core'
 import { Link } from "react-router-dom";
+import {auth, provider} from "../firebase-config"
+import {signInWithPopup} from "firebase/auth"
+import { useHistory } from "react-router-dom"
+import "./SiteNav.css"
 
 
 
-class SiteNav extends React.Component {
-  // onItemClicked = () => {};
+function SiteNav ({setIsAuth}) {
+  const history = useHistory();
 
-  render() {
+  const signInWithGoogle = () => {
+    signInWithPopup(auth, provider)
+    .then(() => {
+      localStorage.setItem("isAuth", true);
+        setIsAuth(true)
+        history.push("/");
+    });
+
+  };
+
     return (
       <header className="p-3 text-white"
       // bg;#e5e4e5
@@ -22,9 +35,9 @@ class SiteNav extends React.Component {
             
              <img
                 src="https://www.nightmarketbangkok.com/wp-content/uploads/2021/11/pelagic-Dark-black.png"
-                width="40"
-                height="30"
-                style={{paddingRight:2}}
+                width="65"
+                height="55"
+                style={{paddingRight:2, marginBottom:15}}
                 className="d-inline-block align-top logo-gay" 
                 alt="gay-reaves-pilates"
               />
@@ -68,14 +81,19 @@ class SiteNav extends React.Component {
                 >
                   Contact
                 </Link>
-              </li> 
+              </li>
+             
               <li>
                 <Link
-                  to="login"
-                  className= "btn btn-outline-secondary btn-lg"
-                  // onClick={this.pushTech}
-                >
-                  Login
+                className=" btn btn-outline-secondary btn-med   "
+                 to=""
+                 onClick={signInWithGoogle}
+                 
+                 type="submit"
+                 style={{ marginTop:18}}
+                 
+                 >
+               <span className="btn-wrapper--label">Login</span>
                 </Link>
               </li> 
            
@@ -102,6 +120,6 @@ class SiteNav extends React.Component {
       </header>
     ); // multi-line expression wrapp in ()
   }
-}
+
 
 export default SiteNav;

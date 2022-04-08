@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react"
 import {addDoc, collection} from 'firebase/firestore';
 import {auth, db} from '../firebase-config'
+import {   } from "react-router-dom";
+import {
+  
+  Button,
+  
+} from '@material-ui/core';
+
+import "./CreatePost.css"
 
 
 
@@ -11,19 +19,24 @@ import { useHistory } from "react-router-dom"
 // import "./CreatePost.css";
 
 
-function CreatePost () {
+function CreatePost ({isAuth}) {
   const history = useHistory();
   const [title, setTitle] = useState("");
   const [postText, setPostText] = useState("");
 
   const postsCollectionRef = collection(db, "posts")
-  
+  // let navigate = useNavigate();
   const createPost = async () => {
     await addDoc(postsCollectionRef, {
     title, postText, author: {name: auth.currentUser.displayName, id: auth.currentUser.uid  }})
     history.push("/");
   };
 
+  useEffect(() => {
+    if (!isAuth) {
+      history.push("/login");
+    }
+  }, );
   return <div className="createPostPage">
    
     <div className="cpContainer">
@@ -45,7 +58,10 @@ function CreatePost () {
         />
         </div>
 
-        <button onClick={createPost}>Submit Post</button>
+        <Button
+        className="btn btn-outline-secondary btn-sm"
+        variant="contained"
+        onClick={createPost}>Submit Post</Button>
 
       </div>
     </div>

@@ -73,7 +73,7 @@ function App() {
         </Route>
         <Route exact path="/CreatePost">
          
-          <CreatePost />
+          <CreatePost isAuth={isAuth} />
         </Route>
         <Route exact path="/Login">
           <Login setIsAuth={setIsAuth}/>

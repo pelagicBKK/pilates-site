@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
-import {  Container, Button, Card } from '@material-ui/core'
-
+import {  Container, Card } from '@material-ui/core'
+import "./Login.css"
 import {auth, provider} from "../firebase-config"
 import {signInWithPopup} from "firebase/auth"
 import { useHistory } from "react-router-dom"
@@ -36,7 +36,7 @@ function Login({setIsAuth}) {
     <Container style={{marginLeft:"30%", marginRight:"30%", marginBottom:"15px"}}>
   
       
-        <Card className="mb-4 contact-card shadow-lg p-3 mb-5 bg-white rounded align-center" style={{width:400}}>
+        <Card className="mb-4 contact-card shadow-lg p-3 mb-5 bg-white rounded align-center" style={{width:275, height:185}}>
             <div className="card-img-wrapper">
               <div className="card-badges card-badges-bottom">
                 {/* <div className="badge badge-warning badge-pill">
@@ -49,20 +49,28 @@ function Login({setIsAuth}) {
               <h5 className="card-title">Card title</h5>
               <p className="card-text "style={{color:"black"}}>
               {/* <p className="card-text text-white-50"> */}
-                Login With Google
+                
               </p>
-              <Button
-                          // variant="contained"
+
+              <button
+                        //  variant="contained"
                          
-                          className="login-with-google-btn"
+                          className=" btn-image btn-lg btn-outline-success "
+                          
                           onClick={signInWithGoogle}
-                          color="primary"
+                          //  color="black"
                           type="submit"
-                        >
-                          <span className="btn-wrapper--label">Sign In</span>
-                        </Button>
+                          
+                          >
+                        <span className="btn-wrapper--label"></span>
+                        </button>
             </div>
           
+           
+
+
+
+
           </Card>
         
     </Container>

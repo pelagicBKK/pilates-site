@@ -35,7 +35,8 @@ class SiteNav extends React.Component {
             <li>
                 <Link
                   to="/"
-                  className="nav-link px-2 text-secondary link-button onClick"
+                  className="nav-link px-2 text-secondary "
+                
                   // onClick={this.pushHome}
                 >
                   Home
@@ -62,7 +63,7 @@ class SiteNav extends React.Component {
               <li>
                 <Link
                   to="contact"
-                  className="nav-link px-2 text-blue link-button"
+                  className="nav-link px-2 text-secondary link-button"
                   // onClick={this.pushTech}
                 >
                   Contact
@@ -71,7 +72,7 @@ class SiteNav extends React.Component {
               <li>
                 <Link
                   to="login"
-                  className="nav-link px-2 text-blue link-button"
+                  className= "btn btn-outline-secondary btn-lg"
                   // onClick={this.pushTech}
                 >
                   Login

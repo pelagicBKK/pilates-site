@@ -71,21 +71,21 @@ function SiteNavLogin ({setIsAuth}){
              
            
               <li>
-              <button
+              <Link
                           // variant="contained"
-                         size="med"
-                          className="logout-google"
+                          to=""
+                          className="logout-google btn btn-outline-secondary btn-lg "
                           onClick={signUserOut}
                           color="primary"
                           type="submit"
                         >
                           <span className="btn-wrapper--label">Sign Out</span>
-                        </button>
+                        </Link>
               </li> 
               <li>
                 <Link
                   to="createpost"
-                  className="nav-link px-2 text-blue link-button"
+                  className="btn btn-outline-secondary btn-lg"
                   // onClick={this.pushTech}
                 >
                   Create Post

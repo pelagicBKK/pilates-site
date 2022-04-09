@@ -1,14 +1,14 @@
 
-import React, {useState, useEffect, Fragment } from "react";
+import React, {useState, useEffect, Fragment, } from "react";
 import {getDocs, collection, deleteDoc, doc} from 'firebase/firestore';
 // import Blogs from "../components/blogs/Blogs";
-import { db} from '../firebase-config'
+import { auth, db} from '../firebase-config'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  
-  Button,
-  
-} from '@material-ui/core';
+import { Grid,  Button,  } from '@material-ui/core';
+
+import stock1 from '../images/stock-photos/stock-1.jpg';
+
+
 
 
 
@@ -33,68 +33,134 @@ function BlogsPage({isAuth}) {
     const postDoc = doc(db, "posts", id )
     await deleteDoc (postDoc)
   }
+ 
 
   return (
-    <Fragment>
-      <div className="hero-wrapper">
-        {/* <div className="flex-grow-5 d-flex align-items-center">
-          <div
-            className="bg-composed-wrapper--image bg-composed-filter-rm opacity-9 h-100"
-            // style={{ backgroundImage: "url(" + chefs + ")" }}
-            style={{
-              // backgroundImage: `url(${hero6})`,
-              backgroundColor:"blue",
-              
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center center",
-              backgroundSize: "cover",
-              backgroundAttachment: "fixed",
-              height: "100%",
-              width: "100%",
-            }}
-          /> */}
-          <div className="bg-composed-wrapper--content justify-content-center"> 
-         
-          {postLists.map((post) =>{
-            return (
-            <div className="post"> 
-            <div className="postHeader">
-              <div className="title">
-                <h1> {post.title }</h1>
-                </div>
-                <div className="deletePost">
+<Fragment>
+
+
+
+        <div className="text-center my-5">
+          <h1 className="display-4 mb-3 font-weight-bold" style={{color:"#e5e4e5"}}>
+            Blogs
+          </h1>
+          <p className="font-size-lg text-black-50">
+            Indignation and dislike men who are so beguiled and demoralized.
+          </p>
+        </div>
+        
+        {/* <div class="col-3 card-template"> */}
+        
+        
+          
+    {/* <Grid container spacing={4} >
+      <Grid item xs={12} md={6} lg={4}> */}
+
+
+{/* <div className="card border-0 hover-shadow"> */}
+                
+                {/* <div className="card-img-wrapper">
                   
-                <Button
+                  <img
+                    src={stock1}
+                    className="card-img-top rounded"
+                    alt="..."
+                  />
+                </div> */}
+                  
+
+       
+	   
+	   
+          
+		  
+         
+  {/* {postLists.map((post) =>{ */}
+       
+  {postLists.map((post) =>{
+            return (
+      <div className="container">
+        <div className="row">
+        <div className="col">
+
+                {/* Beginning of Card 1*/}
+      <div className="card card-transparent mb-4" style={{width:"30%"}}>
+          <div className="card-body text-black text-center ">
+                   <h1> {post.title }</h1>
+               
+                    <p>
+                      {post.postText}
+                 </p>
+
+                 <h3> @{post.author.name }</h3>
+                 
+                 
+         
+                 <Button
+                    size="small"
+                    variant="contained"
+                    color="primary"
+                    className="mt-1">
+                    Read More
+                  </Button>
+                
+                  <div className="deletePost">
+                  
+              {isAuth && post.author.id === auth.currentUser.uid && (  <Button
         className="btn btn-outline btn-sm"
         type="button"
                     onClick={() => {
                        deletePost(post.id);
                     }} 
-                    style={ !isAuth ? {display: "none"} : null }  
+                    // style={ !isAuth ? {display: "none"} : null }  
                     // style={{ border: '1px solid', borderColor:"gray"  }}
-                  >
+                  > &#128465;
                     Delete
                   
                   {/* <FontAwesomeIcon icon="fa-solid fa-trash-can" /> */}
-                  </Button></div>
-                </div>
-           <div className=""> {post.postText }</div>
-           <h3>{}</h3>
-           </div>
-           );
-          })} 
+                  </Button>)}</div>
+
+
+
+
+
+
+                   
+              
+         
 
 
  
-            {/* <SplashNavBar {...props} /> */}
-            {/* <Blogs /> */}
+                  </div>
+                  </div>  
+                  {/* End of Card 1*/}
+
+                      
+
+
+
+
 
           </div>
+        </div> 
+        </div>
         
-       
-      
-      </div>
-    </Fragment>
+        );
+      })} 
+    
+
+
+    
+            
+          {/* </Grid>
+          </Grid> */}
+          
+          
+        
+   
+
+  
+</Fragment>
   );
 }
 export default BlogsPage;

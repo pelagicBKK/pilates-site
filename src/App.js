@@ -7,6 +7,7 @@ import SiteNav from "./components/SiteNav";
  import SiteNavLogin from "./components/SiteNavLogin";
 import Footer from "./components/Footer";
 import Benefits1 from "./components/home/Benefits1";
+import Blogs from "./components/blogs/Blogs";
 import ContactUsForm from "./components/contact/ContactUsForm";
 // import Blogs from "./components/blogs/Blogs";
 import Home from "./pages/Home";
@@ -31,7 +32,7 @@ import ScrollToTop from "./ScrollToTop";
 
 function App() {
 
-  const [isAuth,setIsAuth, ] = useState(false);
+  const [isAuth,setIsAuth, ] = useState(localStorage.getItem("isAuth"));
   
 
   // const signUserOut =() =>{
@@ -82,8 +83,13 @@ function App() {
         <Route exact path="/contact">
           <ContactUsForm />
         </Route>
+
+        <Route exact path="/blogs">
+          <Blogs />
+        </Route>
+
         <Route exact path="/blogspage">
-        {/* <Blogs /> */}
+       {/* <Blogs  /> */}
           <BlogsPage isAuth={isAuth}/>
         </Route>
       </Switch>

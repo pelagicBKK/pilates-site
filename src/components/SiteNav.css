@@ -1,18 +1,54 @@
-.btn-image {
+/* .btn-image {
   background: url('http://speechpathconsulting.com/wp-content/uploads/2022/04/button-google-word-trim-removebg-preview-e1649450066181.png') no-repeat  ;
-  background-position: center center;
+  background-position: 100%;
+
   
   
   
+  
+} */
+
+.btn-border {
+
+    border-radius: 5px;
+    width: 100%;
+    padding-right: 100%;
+
+}
+
+/* .list-site-nav  {
+
+    width:auto;
+    background: black;
+
+} */
+
+.cover-img {
+  object-fit: cover;
 }
 
 /* .btn-image :hover {
-  /* color: #f0eb6e; */
-  /* background: url('http://speechpathconsulting.com/wp-content/uploads/2022/04/button-google-word-trim-removebg-preview.png') no-repeat  ; */
-  /* background-color: #38e896; */
-  /* border-color: #3d390f; */
-  /* background-position: center center;
+  background: url("http://speechpathconsulting.com/wp-content/uploads/2022/04/button-google-word-trim-removebg-preview-e1649450066181.png") no-repeat;
+} */
+
+/* button:focus {
+  outline: 1px dotted;
+  outline-offset: 1px;
+} */
+
+ /* .btn-outline-success :hover {
+  color: #f0eb6e;
+background: url('http://speechpathconsulting.com/wp-content/uploads/2022/04/button-google-word-trim-removebg-preview.png') no-repeat  ; 
+  background-color: #38e896;
+  border-color: #3d390f;
+   background-position: center center; 
   
   
   
-} */ 
+}  */
+
+/* .btn-outline-success  {
+
+  border: 5;
+
+} */

@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 import {auth, provider} from "../firebase-config"
 import {signInWithPopup} from "firebase/auth"
 import { useHistory } from "react-router-dom"
+// import googleButton from '../images/button/buttonGoogleNB.png';
 import "./SiteNav.css"
+
 
 
 
@@ -20,7 +22,13 @@ function SiteNav ({setIsAuth}) {
     });
 
   };
-
+  
+  function MouseOver(event) {
+    event.target.style.background = '#4285F4';
+  }
+  function MouseOut(event){
+    event.target.style.background="#fff";
+  }
     return (
       <header className="p-3 text-white"
       // bg;#e5e4e5
@@ -83,19 +91,44 @@ function SiteNav ({setIsAuth}) {
                 </Link>
               </li>
              
-              <li>
+              {/* <li>
                 <Link
                 className=" btn btn-outline-secondary btn-med   "
                  to=""
                  onClick={signInWithGoogle}
                  
                  type="submit"
-                 style={{ marginTop:18}}
+                 style={{ marginTop:15}}
                  
                  >
                <span className="btn-wrapper--label">Login</span>
                 </Link>
-              </li> 
+              </li>  */}
+              <li className="list-site-nav">
+             
+            {/* <button style={{marginTop:5}}> */}
+                <img
+               
+                src="https://i.imgur.com/IjVIMxf.png"
+                
+                
+                className=" btn cover-img  "
+                //  to=""
+                 alt="google login"
+                //  width="100"
+                //  height="37"
+                 onClick={signInWithGoogle}
+                 onMouseOver={MouseOver}
+                 onMouseOut={MouseOut}
+                 type="submit"
+                 style={{ marginTop:5, backgroundSize: 200 }}
+                 />
+               
+               {/* style={{ marginTop:5,  border: '1px solid', borderColor:"gray" }} */}
+             
+               {/* </button> */}
+               
+                </li>
            
 
             

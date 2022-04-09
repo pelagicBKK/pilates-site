@@ -4,9 +4,9 @@ import {getDocs, collection, deleteDoc, doc} from 'firebase/firestore';
 // import Blogs from "../components/blogs/Blogs";
 import { auth, db} from '../firebase-config'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Grid,  Button,  } from '@material-ui/core';
+import {  Button,  } from '@material-ui/core';
 
-import stock1 from '../images/stock-photos/stock-1.jpg';
+// import stock1 from '../images/stock-photos/stock-1.jpg';
 
 
 
@@ -79,12 +79,13 @@ function BlogsPage({isAuth}) {
        
   {postLists.map((post) =>{
             return (
-      <div className="container">
-        <div className="row">
-        <div className="col">
+      <div className="container flex-container" style={{flexDirection:"row"}}
+    >
+        {/* <div class="col-3 col-lg-auto mb-3 mb-lg-0 me-lg-3"> */}
+        <div className="row d-flex">
 
                 {/* Beginning of Card 1*/}
-      <div className="card card-transparent mb-4" style={{width:"30%"}}>
+      <div className="card card-transparent mb-4" style={{width:"30%", display: 'flex', flexDirection: 'row'}}>
           <div className="card-body text-black text-center ">
                    <h1> {post.title }</h1>
                
@@ -132,16 +133,16 @@ function BlogsPage({isAuth}) {
 
  
                   </div>
-                  </div>  
+               
                   {/* End of Card 1*/}
 
-                      
+                      </div>
 
 
 
 
 
-          </div>
+          {/* </div> */}
         </div> 
         </div>
         

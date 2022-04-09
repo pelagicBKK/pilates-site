@@ -1,10 +1,10 @@
 import React from "react";
-// import { Button } from '@material-ui/core'
+ import { Button } from '@material-ui/core'
 import { Link } from "react-router-dom";
 import {auth, provider} from "../firebase-config"
 import {signInWithPopup} from "firebase/auth"
 import { useHistory } from "react-router-dom"
-// import googleButton from '../images/button/buttonGoogleNB.png';
+import GoogleSign from '../images/button/GoogleSignInLighter.png';
 import "./SiteNav.css"
 
 
@@ -23,16 +23,16 @@ function SiteNav ({setIsAuth}) {
 
   };
   
-  function MouseOver(event) {
-    event.target.style.background = '#4285F4';
-  }
-  function MouseOut(event){
-    event.target.style.background="#fff";
-  }
+  // function MouseOver(event) {
+  //   event.target.style.background = 'red';
+  // }
+  // function MouseOut(event){
+  //   event.target.style.background="blue";
+  // }
     return (
       <header className="p-3 text-white"
       // bg;#e5e4e5
-      style={{backgroundColor:"#fdfdfd", alignItems: "center", display: "flex", height:100}}>
+      style={{backgroundColor:"#fafafa", alignItems: "center", display: "flex", height:100}}>
         <div className="container" >
         
           <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start" >
@@ -55,6 +55,7 @@ function SiteNav ({setIsAuth}) {
             <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <li>
                 <Link
+                  style={{marginTop:30}}
                   to="/"
                   className="nav-link px-2 text-secondary "
                 
@@ -65,7 +66,8 @@ function SiteNav ({setIsAuth}) {
               </li> 
                <li>
                 <Link
-                  to="/blogs"
+                style={{marginTop:30}}
+                  to="/blogspage"
                   className="nav-link px-2 text-secondary link-button"
                   // onClick={this.pushFriends}
                 >
@@ -74,6 +76,7 @@ function SiteNav ({setIsAuth}) {
               </li> 
               <li>
                 <Link
+                style={{marginTop:30}}
                   to="/study"
                   className="nav-link px-2 text-secondary link-button"
                   // onClick={this.pushStudy}
@@ -83,6 +86,7 @@ function SiteNav ({setIsAuth}) {
               </li> 
               <li>
                 <Link
+                style={{marginTop:30}}
                   to="contact"
                   className="nav-link px-2 text-secondary link-button"
                   // onClick={this.pushTech}
@@ -109,26 +113,43 @@ function SiteNav ({setIsAuth}) {
             {/* <button style={{marginTop:5}}> */}
                 <img
                
-                src="https://i.imgur.com/IjVIMxf.png"
+                src={GoogleSign}
                 
                 
-                className=" btn cover-img  "
+                className="  "
                 //  to=""
+                variant="contained"
                  alt="google login"
-                //  width="100"
-                //  height="37"
+                 width="350"
+                  height="124"
                  onClick={signInWithGoogle}
-                 onMouseOver={MouseOver}
-                 onMouseOut={MouseOut}
+                //  onMouseOver={MouseOver}
+                //  onMouseOut={MouseOut}
                  type="submit"
-                 style={{ marginTop:5, backgroundSize: 200 }}
                  />
+                 {/* style={{ border: '1px solid', borderColor:"gray"  }} */}
                
                {/* style={{ marginTop:5,  border: '1px solid', borderColor:"gray" }} */}
              
                {/* </button> */}
                
                 </li>
+                <li>
+                <Button
+                style={{marginTop:30}}
+        className="btn btn-outline-secondary btn-sm"
+        variant="contained"
+        onClick={signInWithGoogle}>Login</Button>
+    </li>
+
+    <li>
+                <Link
+                to=""
+                style={{marginTop:30}}
+        className="btn btn-outline-secondary btn-med"
+        variant="contained"
+        onClick={signInWithGoogle}>Login</Link>
+    </li>
            
 
             

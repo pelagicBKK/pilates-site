@@ -8,8 +8,9 @@ import SiteNav from "./components/SiteNav";
 import Footer from "./components/Footer";
 import Benefits1 from "./components/home/Benefits1";
 import ContactUsForm from "./components/contact/ContactUsForm";
-import Blogs from "./components/blogs/Blogs";
+// import Blogs from "./components/blogs/Blogs";
 import Home from "./pages/Home";
+import BlogsPage from "./pages/BlogsPage";
 import CreatePost from "./pages/CreatePost";
 // import Login from "./pages/Login";
 // import CssBaseline from "@material-ui/core/CssBaseline";
@@ -81,8 +82,9 @@ function App() {
         <Route exact path="/contact">
           <ContactUsForm />
         </Route>
-        <Route exact path="/blogs">
-          <Blogs />
+        <Route exact path="/blogspage">
+        {/* <Blogs /> */}
+          <BlogsPage isAuth={isAuth}/>
         </Route>
       </Switch>
       <Footer />

@@ -61,7 +61,7 @@ function SiteNavLogin ({setIsAuth}){
               </li> 
                <li>
                 <Link
-                  to="/blogs"
+                  to="/blogspage"
                   className="nav-link px-2 text-secondary link-button"
                   // onClick={this.pushFriends}
                 >

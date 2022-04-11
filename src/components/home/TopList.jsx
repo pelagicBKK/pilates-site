@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import Lottie from 'react-lottie';
 import animationData from '../../images/lotties/pilates-animation.json';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Grid, Card, ListItem } from '@material-ui/core';
+import { Grid,  ListItem } from '@material-ui/core';
 // import { Grid, ListItem } from '@material-ui/core';
 
 

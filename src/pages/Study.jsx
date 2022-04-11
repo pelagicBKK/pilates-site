@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react';
 
 import { Grid, Container  } from '@material-ui/core';
-import BenefitsTable from "./BenefitsTable";
+import BenefitsTable from "../components/BenefitsTable";
 // import svgImage10 from '../..//images/illustrations/projections.svg';
 
 
 
-export default function Benefits() {
+export default function Study() {
   return (
     <Fragment>
 
@@ -21,8 +21,8 @@ export default function Benefits() {
     {/* <div className="feature-box py-3 py-xl-5"> */}
       <Container className="py-3 py-xl-5">
      
-      <div className="pl-0 pl-xl-5 text-center text-black"
-      >
+      <div className="pl-0 pl-xl-5 text-center text-black" style={{ marginRight:"0px", marginLeft:75,  }}>
+      
         <h3 className="font-weight-bold"
         style={{width:"50%",marginLeft:"auto",marginRight:"auto",fontStyle:"italic"}}>
         "Physical and psychological benefits of once-a-week 
@@ -119,7 +119,7 @@ export default function Benefits() {
                         <h3 className="font-size-lg font-weight-bold my-3">
                           <a
                             href="https://www.sciencedirect.com/science/article/abs/pii/S0031938416302591/"
-                            onClick={e => e.preventDefault()}
+                            // onClick={e => e.preventDefault()}
                             className="text-first">
                             Study
                           </a>

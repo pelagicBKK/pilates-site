@@ -6,7 +6,7 @@ import '@fortawesome/fontawesome-free/js/all.js';
 import SiteNav from "./components/SiteNav";
  import SiteNavLogin from "./components/SiteNavLogin";
 import Footer from "./components/Footer";
-import Benefits1 from "./components/home/Benefits1";
+
 // import BlogCard from "./components/blogs/BlogCard";
 // import TestBlog from "./components/TestBlog";
 import ContactUsForm from "./components/contact/ContactUsForm";
@@ -14,6 +14,9 @@ import BlogCard from "./components/blogs/BlogCard";
 import Home from "./pages/Home";
 import BlogsPage from "./pages/BlogsPage";
 import CreatePost from "./pages/CreatePost";
+// import BenefitsTable from "./components/BenefitsTable";
+import Study from "./pages/Study";
+
 // import Login from "./pages/Login";
 // import CssBaseline from "@material-ui/core/CssBaseline";
 import ScrollToTop from "./ScrollToTop";
@@ -71,9 +74,8 @@ function App() {
             {/* <HomeContent /> */}
           </main>
         </Route>
-        <Route exact path="/study">
-          <Benefits1 />
-        </Route>
+       
+       
         <Route exact path="/CreatePost">
          
           <CreatePost isAuth={isAuth} />
@@ -83,6 +85,11 @@ function App() {
         </Route> */}
         <Route exact path="/contact">
           <ContactUsForm />
+        </Route>
+
+        <Route exact path="/study">
+          
+          <Study/>
         </Route>
 
         <Route exact path="/BlogCard">

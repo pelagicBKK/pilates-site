@@ -7,7 +7,8 @@ import SiteNav from "./components/SiteNav";
  import SiteNavLogin from "./components/SiteNavLogin";
 import Footer from "./components/Footer";
 import Benefits1 from "./components/home/Benefits1";
-import BlogCard from "./components/blogs/BlogCard";
+// import BlogCard from "./components/blogs/BlogCard";
+// import TestBlog from "./components/TestBlog";
 import ContactUsForm from "./components/contact/ContactUsForm";
 // import Blogs from "./components/blogs/Blogs";
 import Home from "./pages/Home";
@@ -84,13 +85,13 @@ function App() {
           <ContactUsForm />
         </Route>
 
-        <Route exact path="/blogcard">
-          <BlogCard />
-        </Route>
+        {/* <Route exact path="/TestBlog">
+          <TestBlog />
+        </Route> */}
 
-        <Route exact path="/blogspage">
-       {/* <Blogs  /> */}
+        <Route exact path="/BlogsPage">
           <BlogsPage isAuth={isAuth}/>
+          {/* <TestBlog /> */}
         </Route>
       </Switch>
       <Footer />

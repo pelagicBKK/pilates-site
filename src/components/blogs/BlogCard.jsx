@@ -13,9 +13,9 @@ export default function BlogCard({title, text, author}) {
  
   
   return (
-    <div class="col 6 card-template">
+    <div class="col 6 card-template" >
         <div className="row">
-          <div className="card-tech border-0 shadow">
+          <div className=" card card-tech border-0 shadow" style={{marginTop:20 }}>
             {/* <div>
               {company.images &&
                 company.images.map((item) => {

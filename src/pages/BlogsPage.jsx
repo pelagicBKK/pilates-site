@@ -73,7 +73,7 @@ function BlogsPage({isAuth}) {
         </div>
       </form>
     </div>
-    <div className="row" style={{marginTop:20}}>
+    <div className="row" >
     {postLists.map ((post) => (
            
         <BlogCard 

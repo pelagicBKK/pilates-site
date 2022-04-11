@@ -22,7 +22,7 @@ export default function Home() {
   return (
 
     <Fragment>
-       <div className="hero-wrapper">
+       <div className="hero-wrapper" >
         <div className="flex-grow-5 d-flex align-items-center">
           <div
             // className="bg-composed-wrapper--image bg-composed-filter-rm opacity-9"

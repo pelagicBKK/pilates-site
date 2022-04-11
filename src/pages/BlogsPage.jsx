@@ -40,7 +40,7 @@ function BlogsPage({isAuth}) {
 
   return (
     
-    <div className="hero-wrapper" style={{ marginRight:"100px", marginLeft:"100px",  }}>
+    <div className="hero-wrapper" style={{ width:"90%",marginRight:"auto", marginLeft:"auto", marginTop:10  }}>
     
     <div>
       <form className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">

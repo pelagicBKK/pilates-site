@@ -28,7 +28,7 @@ export default function Study() {
         "Physical and psychological benefits of once-a-week 
         Pilates exercises in young sedentary women: A 10-week longitudinal study"
         </h3>
-        <div className="py-0 py-xl-5"
+        <div className="py-0 py-xl-5" style={{ marginRight:0, marginLeft:5,  }}
          >
           <Grid container spacing={4}>
 

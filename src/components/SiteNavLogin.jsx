@@ -40,8 +40,8 @@ function SiteNavLogin ({setIsAuth}){
             
              <img
                 src="https://www.nightmarketbangkok.com/wp-content/uploads/2021/11/pelagic-Dark-black.png"
-                width="40"
-                height="30"
+                width="65"
+                height="55"
                 style={{paddingRight:2}}
                 className="d-inline-block align-top logo-gay" 
                 alt="gay-reaves-pilates"

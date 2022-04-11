@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import {auth, provider} from "../firebase-config"
 import {signInWithPopup} from "firebase/auth"
 import { useHistory } from "react-router-dom"
-import GoogleSign from '../images/button/GoogleSignInLighter.png';
+// import GoogleSign from '../images/button/GoogleSignInLighter.png';
 import "./SiteNav.css"
 
 
@@ -45,7 +45,7 @@ function SiteNav ({setIsAuth}) {
                 src="https://www.nightmarketbangkok.com/wp-content/uploads/2021/11/pelagic-Dark-black.png"
                 width="65"
                 height="55"
-                style={{paddingRight:2, marginBottom:15}}
+                // style={{paddingRight:2, marginBottom:15}}
                 className="d-inline-block align-top logo-gay" 
                 alt="gay-reaves-pilates"
               />
@@ -108,48 +108,27 @@ function SiteNav ({setIsAuth}) {
                <span className="btn-wrapper--label">Login</span>
                 </Link>
               </li>  */}
-              <li className="list-site-nav">
-             
-            {/* <button style={{marginTop:5}}> */}
-                <img
-               
-                src={GoogleSign}
-                
-                
-                className="  "
-                //  to=""
-                variant="contained"
-                 alt="google login"
-                 width="350"
-                  height="124"
-                 onClick={signInWithGoogle}
-                //  onMouseOver={MouseOver}
-                //  onMouseOut={MouseOut}
-                 type="submit"
-                 />
-                 {/* style={{ border: '1px solid', borderColor:"gray"  }} */}
-               
-               {/* style={{ marginTop:5,  border: '1px solid', borderColor:"gray" }} */}
-             
-               {/* </button> */}
-               
-                </li>
+
+
+            
                 <li>
                 <Button
-                style={{marginTop:30}}
-        className="btn btn-outline-secondary btn-sm"
+                type="button"
+                style={{marginTop:30, width:90, height: 45, marginLeft:15}}
+        className="btn btn-secondary btn-lg"
+        
         variant="contained"
         onClick={signInWithGoogle}>Login</Button>
     </li>
 
-    <li>
+    {/* <li>
                 <Link
                 to=""
                 style={{marginTop:30}}
         className="btn btn-outline-secondary btn-med"
         variant="contained"
         onClick={signInWithGoogle}>Login</Link>
-    </li>
+    </li> */}
            
 
             

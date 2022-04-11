@@ -1,6 +1,6 @@
 
 import React, {useState, useEffect,  } from "react";
-import {getDocs, collection, } from 'firebase/firestore';
+import {getDocs, collection } from 'firebase/firestore';
 // import {getDocs, collection, deleteDoc, doc} from 'firebase/firestore';
 // import Blogs from "../components/blogs/Blogs";
 import {   db} from '../firebase-config'
@@ -39,7 +39,7 @@ function BlogsPage({isAuth}) {
  
 
   return (
-    <div className="container">
+  <div className="container"  style={{marginTop:10}}>
     <div>
       <form className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
         <div className="d-flex">
@@ -71,14 +71,18 @@ function BlogsPage({isAuth}) {
         </div>
       </form>
     </div>
-    <div className="row">
+    <div className="row" style={{marginTop:20}}>
     {postLists.map ((post) => (
            
-        <BlogCard key={post.id} title={post.title} text={post.postText} 
-    author={post.author.name}/>
+        <BlogCard 
+        id={post.id} title={post.title} 
+        text={post.postText} 
+        author={post.author.name}
+        />
 
         
         ))}
+        
     </div>
 
     {/* <div style={{ height: 100, marginVertical: 20, paddingTop: 25 }}>

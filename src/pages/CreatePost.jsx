@@ -23,12 +23,13 @@ function CreatePost ({isAuth}) {
   const history = useHistory();
   const [title, setTitle] = useState("");
   const [postText, setPostText] = useState("");
+  const [postImage, setPostImage] = useState("");
 
   const postsCollectionRef = collection(db, "posts")
   // let navigate = useNavigate();
   const createPost = async () => {
     await addDoc(postsCollectionRef, {
-    title, postText, author: {name: auth.currentUser.displayName, id: auth.currentUser.uid  }})
+    title, postText, postImage, author: {name: auth.currentUser.displayName, id: auth.currentUser.uid  }})
     history.push("/blogspage");
   };
 
@@ -48,13 +49,23 @@ function CreatePost ({isAuth}) {
         onChange={(event) => {setTitle(event.target.value);
         }}
         />
-        <div/>
+       
         <div className="inputGp">
         <label>Post:</label>
         <textarea placeholder="Post..."
         onChange={(event) => {setPostText(event.target.value);
         }}
-        
+        />
+        </div>
+
+          
+
+        <div className="inputGp">
+        <label>Image:</label>
+        <input 
+        placeholder="Image..." 
+        onChange={(event) => {setPostImage(event.target.value);
+        }}
         />
         </div>
 

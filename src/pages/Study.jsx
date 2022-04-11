@@ -19,16 +19,16 @@ export default function Study() {
 
       
     {/* <div className="feature-box py-3 py-xl-5"> */}
-      <Container className="py-3 py-xl-5" style={{ marginRight:"0px", marginLeft:115,  }}>
+      <Container className="py-3 py-xl-5" >
      
-      <div className="pl-0 pl-xl-5 text-center text-black" style={{ marginRight:"0px", marginLeft:75,  }}>
+      <div className="pl-0 pl-xl-5 text-center text-black" >
       
         <h3 className="font-weight-bold"
-        style={{width:"50%",marginLeft:"auto",marginRight:"auto",fontStyle:"italic"}}>
+        style={{width:"100%",marginLeft:"auto",marginRight:"auto",fontStyle:"italic"}}>
         "Physical and psychological benefits of once-a-week 
         Pilates exercises in young sedentary women: A 10-week longitudinal study"
         </h3>
-        <div className="py-0 py-xl-5" style={{ marginRight:0, marginLeft:5,  }}
+        <div className="py-0 py-xl-5" 
          >
           <Grid container spacing={4}>
 

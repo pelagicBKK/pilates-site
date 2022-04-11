@@ -4,22 +4,23 @@ import React, { Fragment } from 'react';
 
 
 
-import { Grid, ListItem,  } from '@material-ui/core';
+import { Grid, ListItem } from '@material-ui/core';
 
 
 
 export default function LivePreviewExample() {
   return (
     <Fragment>
-      <Grid  container spacing={4}>
-        <Grid item xs={12} lg={6}>
+      <div style={{ marginRight:"100px", marginLeft:"100px",  }}>
+            <Grid container spacing={6}>
+              <Grid item xs={12} lg={6}>
         
-              <div className="scroll-area rounded  shadow-overflow" style={{width:470, marginLeft:100}}>
+              <div className="scroll-area rounded  shadow-overflow" style={{width:"100%", marginLeft:"auto", marginRight:"auto" }}>
               
 
                
                 
-                  <ListItem className="py-3 border-0 ">
+                  <ListItem className="py-3 border-0 " >
                  
                     <div className="d-flex align-items-center w-100">
                     
@@ -113,6 +114,7 @@ export default function LivePreviewExample() {
         </Grid>
       
       </Grid>
+      </div>
     </Fragment>
   );
 }

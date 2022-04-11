@@ -29,7 +29,7 @@ import stock2 from "../../images/avatars/mom-profile.jpg";
 
 
               <Grid item xs={12} lg={6} className="d-flex align-items-center">
-                <Card className="p-3 shadow-lg p-3 mb-5 bg-white rounded" style={{margin:35, paddingRight:15}}
+                <Card className="p-3 shadow-lg p-3 mb-5 bg-white rounded" 
                 >
 
                   {/* <img
@@ -48,8 +48,7 @@ import stock2 from "../../images/avatars/mom-profile.jpg";
                       style={{
                         border: "70px",
                         padding: "30px",
-                        width:"100%",
-                        height:"100%"
+                        
                       }}
                        alt="..."
                        

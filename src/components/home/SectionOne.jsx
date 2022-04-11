@@ -12,8 +12,8 @@ export default function SectionOne() {
     <Fragment>
       <div className=" py-3 py-xl-5" >
       <Container className="py-3 d-flex flex-wrap align-items-center "style={{  marginLeft:"", marginRight:""}}>
-        <div style={{ marginRight:"150px", marginLeft:"150px",  }}>
-            <Grid container spacing={2}>
+        <div style={{ marginRight:"100px", marginLeft:"100px",  }}>
+            <Grid container spacing={6}>
 
     
 
@@ -64,8 +64,8 @@ export default function SectionOne() {
             </Grid>
           </div>
 
-          <div style={{ marginRight:"150px", marginLeft:"150px",  }}>
-            <Grid container spacing={2}>
+          <div style={{ marginRight:"100px", marginLeft:"100px",  }}>
+            <Grid container spacing={6}>
               <Grid item xs={12} lg={6}>
               <div className="py-0 py-xl-5" >
 

@@ -23,7 +23,7 @@ import stock2 from "../../images/avatars/mom-profile.jpg";
           {/* <div className="py-0 py-xl-5" > */}
 
             
-            <Grid container spacing={2}>
+            <Grid container spacing={6}>
 
     
 

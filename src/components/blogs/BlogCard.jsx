@@ -1,122 +1,91 @@
-import React, { Fragment } from 'react';
+import React, { } from 'react';
+// import { auth, } from '../firebase-config'
 
-import { Grid, Container, Button } from '@material-ui/core';
 
-import stock1 from '../../images/stock-photos/stock-1.jpg';
-import stock2 from '../../images/stock-photos/stock-2.jpg';
-import stock3 from '../../images/stock-photos/stock-3.jpg';
+// import {  Button } from '@material-ui/core';
 
-export default function LivePreviewExample() {
+// import stock1 from '../../images/stock-photos/stock-1.jpg';
+// import stock2 from '../../images/stock-photos/stock-2.jpg';
+// import stock3 from '../../images/stock-photos/stock-3.jpg';
+
+export default function BlogCard({title, text, author}) {
+
+  
+ 
+  
   return (
-    <Fragment>
-      <div className="py-5 bg-slick-carbon">
-        <div className="text-center my-5">
-          <h1 className="display-4 mb-3 font-weight-bold" style={{color:"#e5e4e5"}}>
-            
-          </h1>
-          <p className="font-size-lg text-white-50">
-            Indignation and dislike men who are so beguiled and demoralized.
-          </p>
-        </div>
-        <Container>
-          <Grid container spacing={4}>
-            <Grid item xs={12} md={6} lg={4}>
-              <div className="card card-transparent mb-4">
-                <div className="card-img-wrapper">
-                  <div className="card-badges card-badges-bottom">
-                    {/* <div className="badge badge-warning badge-pill">
-                      Warning
-                    </div> */}
-                  </div>
-                  <img
-                    src={stock1}
-                    className="card-img-top rounded"
-                    alt="..."
-                  />
-                </div>
-                <div className="card-body text-white text-center">
-                  <h5 className="card-title">Card title</h5>
-                  <p className="card-text "style={{color:"black"}}>
-                  {/* <p className="card-text text-white-50"> */}
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <Button
-                    size="small"
-                    variant="contained"
-                    color="primary"
-                    className="mt-1">
-                    Read More
-                  </Button>
-                </div>
-              </div>
-            </Grid>
-            <Grid item xs={12} md={6} lg={4}>
-              <div className="card card-transparent mb-4">
-                <div className="card-img-wrapper">
-                  <div className="card-badges card-badges-bottom">
-                    {/* <span className="mr-2 badge badge-success badge-pill">
-                      Success
+    <div class="col-3 card-template">
+        <div className="row">
+          <div className="card-tech border-0 shadow">
+            {/* <div>
+              {company.images &&
+                company.images.map((item) => {
+                  return (
+                    <span key={Math.random()}>
+                      <img
+                        className="image-tech"
+                        src={item.imageUrl}
+                        // style={{ width: 50, height: 50, borderRadius: 10 }}
+                        alt="tech"
+                      />
                     </span>
-                    <span className="text-info badge badge-neutral-info badge-pill">
-                      Info
-                    </span> */}
-                  </div>
-                  <img
-                    src={stock2}
-                    className="card-img-top rounded"
-                    alt="..."
-                  />
+                  );
+                })}
+            </div> */}
+            <div className="card-body text-center">
+              <h2 className="card-title-tech mb-0">{title}</h2>
+              <div>
+                <div className="card-text-tech-profile ">
+                  <p>{text}</p>
                 </div>
-                <div className="card-body text-white text-center">
-                  <h5 className="card-title">Card title</h5>
-                  <p className="card-text "style={{color:"black"}}>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <Button
-                    size="small"
-                    variant="contained"
-                    color="primary"
-                    className="mt-1">
-                     Read More
-                  </Button>
+
+                <div className="card-text-tech-summary ">
+                 <h5>@{author} </h5>
                 </div>
+
+                {/* <div className="card-text-tech-slug">
+                  {company.slug}
+                  <h4> </h4>
+                </div> */}
+
+                {/* <div class="card-container-avatar ">
+                  <h3 className="friend-title"> Friends </h3>
+                  {company.friends &&
+                    company.friends.map((item) => (
+                      <span key={Math.random()}>
+                        <img
+                          className="avatar-image"
+                          // style={{ width: 50, height: 50, borderRadius: 100 }}
+                          src={item.primaryImage.imageUrl}
+                          alt="imgfriends"
+                        />
+                      </span>
+                    ))}
+                </div> */}
+                {/* <div className="avatar-dots">...</div> */}
               </div>
-            </Grid>
-            <Grid item xs={12} md={6} lg={4}>
-              <div className="card card-transparent mb-4">
-                <div className="card-img-wrapper">
-                  <div className="card-badges card-badges-bottom">
-                    {/* <div className="badge badge-danger">Danger</div> */}
-                  </div>
-                  <img
-                    src={stock3}
-                    className="card-img-top rounded"
-                    alt="..."
-                  />
-                </div>
-                <div className="card-body text-white text-center">
-                  <h5 className="card-title">Card title</h5>
-                  <p className="card-text "style={{color:"black"}}>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <Button
-                    size="small"
-                    variant="contained"
-                    color="primary"
-                    className="mt-1">
-                     Read More
-                  </Button>
-                </div>
-              </div>
-            </Grid>
-          </Grid>
-        </Container>
+
+              {/* <li class="list-group-item list-group-item-primary">{items}</li> */}
+              {/* <div className="deletePost">
+                  
+                  {isAuth && post.author.id === auth.currentUser.uid && (  <Button
+            className="btn btn-outline btn-sm"
+            type="button"
+                        onClick={() => { */}
+                         {/* deletePost(post.id); */}
+                        {/* }} 
+                        // style={ !isAuth ? {display: "none"} : null }  
+                        // style={{ border: '1px solid', borderColor:"gray"  }}
+                      > &#128465;
+                        Delete */}
+                      
+                      {/* <FontAwesomeIcon icon="fa-solid fa-trash-can" /> */}
+                      {/* </Button>)}</div> */}
+            </div>
+          </div>
+        </div>
       </div>
-    </Fragment>
-  );
+    );
 }
 
 

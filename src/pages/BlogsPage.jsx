@@ -1,10 +1,12 @@
 
-import React, {useState, useEffect, Fragment, } from "react";
-import {getDocs, collection, deleteDoc, doc} from 'firebase/firestore';
+import React, {useState, useEffect,  } from "react";
+import {getDocs, collection, } from 'firebase/firestore';
+// import {getDocs, collection, deleteDoc, doc} from 'firebase/firestore';
 // import Blogs from "../components/blogs/Blogs";
-import { auth, db} from '../firebase-config'
+import {   db} from '../firebase-config'
+import BlogCard from '../components/blogs/BlogCard'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  Button,  } from '@material-ui/core';
+// import {  Button,  } from '@material-ui/core';
 
 // import stock1 from '../images/stock-photos/stock-1.jpg';
 
@@ -16,6 +18,7 @@ import {  Button,  } from '@material-ui/core';
 
 
 function BlogsPage({isAuth}) {
+  // const [ setPostList] = useState([]);
   const [postLists, setPostList] = useState([]);
   const postsCollectionRef = collection(db, "posts")
 
@@ -29,139 +32,64 @@ function BlogsPage({isAuth}) {
     
   });
   
-  const deletePost = async (id, )=> {
-    const postDoc = doc(db, "posts", id )
-    await deleteDoc (postDoc)
-  }
+  // const deletePost = async (id, )=> {
+  //   const postDoc = doc(db, "posts", id )
+  //   await deleteDoc (postDoc)
+  // }
  
 
   return (
-<Fragment>
-
-
-
-        <div className="text-center my-5">
-          <h1 className="display-4 mb-3 font-weight-bold" style={{color:"#e5e4e5"}}>
-            Blogs
-          </h1>
-          <p className="font-size-lg text-black-50">
-            Indignation and dislike men who are so beguiled and demoralized.
-          </p>
+    <div className="container">
+    <div>
+      <form className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+        <div className="d-flex">
+          <input
+            type="search"
+            className="form-control form-control-dark search-box"
+            style={{width:200}}
+            name="searchQuery"
+            placeholder="Search "
+            aria-label="Search"
+            // value={this.state.searchQuery}
+            // onChange={this.handleSearchChange}
+          />
+          &nbsp;
+          <button
+            class="btn btn-secondary btn-md"
+            // onClick={this.onSearchClick}
+            type="button"
+          >
+            Search
+          </button>
+          {/* <div className="ml-auto">
+            <NavLink to="/AddTech">
+              <Button btn-outline-secondary btn-md>
+                Add Company
+              </Button>
+            </NavLink>
+          </div> */}
         </div>
+      </form>
+    </div>
+    <div className="row">
+    {postLists.map ((post) => (
+           
+        <BlogCard key={post.id} title={post.title} text={post.postText} 
+    author={post.author.name}/>
+
         
-        {/* <div class="col-3 card-template"> */}
-        
-        
-          
-    {/* <Grid container spacing={4} >
-      <Grid item xs={12} md={6} lg={4}> */}
+        ))}
+    </div>
 
-
-{/* <div className="card border-0 hover-shadow"> */}
-                
-                {/* <div className="card-img-wrapper">
-                  
-                  <img
-                    src={stock1}
-                    className="card-img-top rounded"
-                    alt="..."
-                  />
-                </div> */}
-                  
-
-       
-	   
-	   
-          
-		  
-         
-  {/* {postLists.map((post) =>{ */}
-       
-  {postLists.map((post) =>{
-            return (
-      <div className="container flex-container" style={{flexDirection:"row"}}
-    >
-        {/* <div class="col-3 col-lg-auto mb-3 mb-lg-0 me-lg-3"> */}
-        <div className="row d-flex">
-
-                {/* Beginning of Card 1*/}
-      <div className="card card-transparent mb-4" style={{width:"30%", display: 'flex', flexDirection: 'row'}}>
-          <div className="card-body text-black text-center ">
-                   <h1> {post.title }</h1>
-               
-                    <p>
-                      {post.postText}
-                 </p>
-
-                 <h3> @{post.author.name }</h3>
-                 
-                 
-         
-                 <Button
-                    size="small"
-                    variant="contained"
-                    color="primary"
-                    className="mt-1">
-                    Read More
-                  </Button>
-                
-                  <div className="deletePost">
-                  
-              {isAuth && post.author.id === auth.currentUser.uid && (  <Button
-        className="btn btn-outline btn-sm"
-        type="button"
-                    onClick={() => {
-                       deletePost(post.id);
-                    }} 
-                    // style={ !isAuth ? {display: "none"} : null }  
-                    // style={{ border: '1px solid', borderColor:"gray"  }}
-                  > &#128465;
-                    Delete
-                  
-                  {/* <FontAwesomeIcon icon="fa-solid fa-trash-can" /> */}
-                  </Button>)}</div>
-
-
-
-
-
-
-                   
-              
-         
-
-
- 
-                  </div>
-               
-                  {/* End of Card 1*/}
-
-                      </div>
-
-
-
-
-
-          {/* </div> */}
-        </div> 
-        </div>
-        
-        );
-      })} 
-    
-
-
-    
-            
-          {/* </Grid>
-          </Grid> */}
-          
-          
-        
-   
-
-  
-</Fragment>
-  );
+    {/* <div style={{ height: 100, marginVertical: 20, paddingTop: 25 }}>
+      <Pagination
+        total={this.state.totalCount}
+        current={this.state.currentPageIndex + 1}
+        pageSize={PAGE_SIZE}
+        onChange={this.onPaginationChange}
+      />
+    </div> */}
+  </div>
+);
 }
 export default BlogsPage;

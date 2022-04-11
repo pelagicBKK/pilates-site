@@ -10,7 +10,7 @@ import Benefits1 from "./components/home/Benefits1";
 // import BlogCard from "./components/blogs/BlogCard";
 // import TestBlog from "./components/TestBlog";
 import ContactUsForm from "./components/contact/ContactUsForm";
-// import Blogs from "./components/blogs/Blogs";
+import BlogCard from "./components/blogs/BlogCard";
 import Home from "./pages/Home";
 import BlogsPage from "./pages/BlogsPage";
 import CreatePost from "./pages/CreatePost";
@@ -85,13 +85,13 @@ function App() {
           <ContactUsForm />
         </Route>
 
-        {/* <Route exact path="/TestBlog">
-          <TestBlog />
-        </Route> */}
+        <Route exact path="/BlogCard">
+          <BlogCard isAuth={isAuth} />
+        </Route>
 
         <Route exact path="/BlogsPage">
-          <BlogsPage isAuth={isAuth}/>
-          {/* <TestBlog /> */}
+          <BlogsPage />
+          <BlogCard /> 
         </Route>
       </Switch>
       <Footer />

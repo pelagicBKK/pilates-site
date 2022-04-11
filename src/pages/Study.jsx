@@ -19,7 +19,7 @@ export default function Study() {
 
       
     {/* <div className="feature-box py-3 py-xl-5"> */}
-      <Container className="py-3 py-xl-5">
+      <Container className="py-3 py-xl-5" style={{ marginRight:"0px", marginLeft:115,  }}>
      
       <div className="pl-0 pl-xl-5 text-center text-black" style={{ marginRight:"0px", marginLeft:75,  }}>
       

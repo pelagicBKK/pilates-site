@@ -63,6 +63,7 @@ function CreatePost ({isAuth}) {
         <div className="inputGp">
         <label>Image:</label>
         <input 
+        
         placeholder="Image..." 
         onChange={(event) => {setPostImage(event.target.value);
         }}

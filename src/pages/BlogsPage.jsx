@@ -17,7 +17,7 @@ import BlogCard from '../components/blogs/BlogCard'
 
 
 
-function BlogsPage({isAuth}) {
+function BlogsPage() {
   // const [ setPostList] = useState([]);
   const [postLists, setPostList] = useState([]);
   const postsCollectionRef = collection(db, "posts")
@@ -32,7 +32,7 @@ function BlogsPage({isAuth}) {
     console.log(postLists, "posty");
   });
   
-  // const deletePost = async (id, )=> {
+  // const deletePost = async ({id} )=> {
   //   const postDoc = doc(db, "posts", id )
   //   await deleteDoc (postDoc)
   // }
@@ -73,19 +73,23 @@ function BlogsPage({isAuth}) {
         </div>
       </form>
     </div>
-    <div className="col-12 col-3 row" >
+    <div className="row row-cols-1  row-cols-md-3" >
     {postLists.map ((post) => (
            
         <BlogCard 
+        post={post}
+        key={post.id}
         id={post.id} title={post.title} 
         text={post.postText} 
         author={post.author.name}
-        image={post.postImage}
+       image={post.image}
+        
         />
 
         
         ))}
         
+      
     </div>
 
     {/* <div style={{ height: 100, marginVertical: 20, paddingTop: 25 }}>

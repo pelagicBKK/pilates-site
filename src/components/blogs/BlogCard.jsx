@@ -1,26 +1,26 @@
 import React, { } from 'react';
-// import { auth,  } from '../firebase-config'
+import {   } from '../../firebase-config'
 
 
-// import {  Button } from '@material-ui/core';
+import {   } from '@material-ui/core';
 
 // import stock1 from '../../images/stock-photos/stock-1.jpg';
 // import stock2 from '../../images/stock-photos/stock-2.jpg';
 // import stock3 from '../../images/stock-photos/stock-3.jpg';
 
-export default function BlogCard({title, text, image,author}) {
+export default function BlogCard({title, text, author, image }) {
 
- 
+  // id, title, text, image,author,
   
   return (
-    <div class="col 6 card-template" >
+    <div className="col mb-4"> 
         <div className="row">
-          <div className=" card card-tech border-0 shadow" style={{marginTop:20, width:375 }}>
-          <div className="card-text-img-profile ">
+          <div className=" card card-tech border-0 shadow" style={{marginTop:20, maxWidth:"45%", minWidth:"350px",maxHeight:"65%",minHeight:"45%", padding:20, }} >
+          <div >
                 <img
                     style={{
-                      width: "100%",
-                      height: "100%",
+                      width: "300px",
+                      height: "250px",
                       objectFit: "cover",
                       // margin:100
                       
@@ -41,25 +41,24 @@ export default function BlogCard({title, text, image,author}) {
                  <h5>{author} </h5>
                 </div>
 
-                {/* <div className="card-text-tech-slug">
-                  {company.slug}
-                  <h4> </h4>
-                </div> */}
+                {/* <div className="deletePost">
+                  
+                {isAuth && post.author.id === auth.currentUser.uid && (  
+                  <button
+            className="btn btn-outline btn-sm"
+            type="button"
+                        onClick={(id) => {
+                          this.deletePost(id);
+                        }} 
+                      
+                        
+                      > &#128465;
+                        Delete
+                      
+                      
+                      </button>)}</div> */}
 
-                {/* <div class="card-container-avatar ">
-                  <h3 className="friend-title"> Friends </h3>
-                  {company.friends &&
-                    company.friends.map((item) => (
-                      <span key={Math.random()}>
-                        <img
-                          className="avatar-image"
-                          // style={{ width: 50, height: 50, borderRadius: 100 }}
-                          src={item.primaryImage.imageUrl}
-                          alt="imgfriends"
-                        />
-                      </span>
-                    ))}
-                </div> */}
+
                 {/* <div className="avatar-dots">...</div> */}
               </div>
 

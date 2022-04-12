@@ -8,8 +8,10 @@ import {
   Button,
   
 } from '@material-ui/core';
+// import * as Yup from "yup";
 
 import "./CreatePost.css"
+// import { ErrorMessage } from "formik";
 
 
 
@@ -38,6 +40,16 @@ function CreatePost ({isAuth}) {
       history.push("/login");
     }
   }, );
+
+
+ 
+
+// const CreatePostSchema = Yup.object().shape({
+//   postText: Yup.string().trim().required("Max 600 characters. Make it sweet and to the point :)  Have a Beautiful day!"),
+// });
+
+
+
   return <div className="createPostPage">
    
     <div className="cpContainer">
@@ -45,17 +57,34 @@ function CreatePost ({isAuth}) {
       <div className="inputGp">
         <label>Title:</label>
         <input 
+        maxLength="20"
         placeholder="Title..." 
         onChange={(event) => {setTitle(event.target.value);
         }}
         />
-       
-        <div className="inputGp">
-        <label>Post:</label>
+       <span class="error text-danger">Max Characters 20</span>
+        <div className="inputGp form-group has-error">
+        <label className="control-label" for="inputError"></label>
         <textarea placeholder="Post..."
+         type="text"
+         class="form-control" 
+         id="inputError"
+         maxlength="600"
+         row={5}
+         style={{width:200, height:200}}
+         
+        
+       
+
+         
+        //  style={ this.val.length === 11 ? this.val.length > 7 : "error message"}  
         onChange={(event) => {setPostText(event.target.value);
+        
+         
         }}
         />
+         <span class="error text-danger">Max Characters 240</span>
+         {/* <ErrorMessage name="postText" render={renderError} /> */}
         </div>
 
           

@@ -97,7 +97,7 @@ function App() {
         </Route>
 
         <Route exact path="/BlogsPage">
-          <BlogsPage />
+          <BlogsPage  />
           <BlogCard /> 
         </Route>
       </Switch>

@@ -8,7 +8,7 @@ import React, { } from 'react';
 // import stock2 from '../../images/stock-photos/stock-2.jpg';
 // import stock3 from '../../images/stock-photos/stock-3.jpg';
 
-export default function BlogCard({title, text, author}) {
+export default function BlogCard({title, text, image,author}) {
 
  
   
@@ -37,7 +37,20 @@ export default function BlogCard({title, text, author}) {
                 <div className="card-text-tech-profile ">
                   <p>{text}</p>
                 </div>
-
+                <div className="card-text-tech-profile ">
+                <img
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      // margin:100
+                      
+                    }}
+                    alt="..."
+                    className="img-fluid"
+                    src={image}
+                  />
+                </div>
                 <div className="card-text-tech-summary ">
                  <h5>{author} </h5>
                 </div>

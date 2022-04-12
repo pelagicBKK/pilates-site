@@ -29,7 +29,7 @@ function BlogsPage({isAuth}) {
       setPostList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id }))); 
     };
     getPosts();
-    
+    console.log(postLists, "posty");
   });
   
   // const deletePost = async (id, )=> {
@@ -80,6 +80,7 @@ function BlogsPage({isAuth}) {
         id={post.id} title={post.title} 
         text={post.postText} 
         author={post.author.name}
+        image={post.postImage}
         />
 
         

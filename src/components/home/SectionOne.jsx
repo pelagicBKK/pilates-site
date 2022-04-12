@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import firstImg from "../../images/mom/momPilatesReformer-noBg-sea.png";
+import firstImg from "../../images/mom/momBlurbg.jpg";
 import secondImg from "../../images/stock-photos/woman-doing-pilates-two.jpg";
 import SectionThree from "./SectionThree";
 

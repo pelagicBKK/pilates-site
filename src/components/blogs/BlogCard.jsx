@@ -15,29 +15,8 @@ export default function BlogCard({title, text, image,author}) {
   return (
     <div class="col 6 card-template" >
         <div className="row">
-          <div className=" card card-tech border-0 shadow" style={{marginTop:20 }}>
-            {/* <div>
-              {company.images &&
-                company.images.map((item) => {
-                  return (
-                    <span key={Math.random()}>
-                      <img
-                        className="image-tech"
-                        src={item.imageUrl}
-                        // style={{ width: 50, height: 50, borderRadius: 10 }}
-                        alt="tech"
-                      />
-                    </span>
-                  );
-                })}
-            </div>  */}
-            <div className="card-body text-center">
-              <h2 className="card-title-tech mb-0">{title}</h2>
-              <div>
-                <div className="card-text-tech-profile ">
-                  <p>{text}</p>
-                </div>
-                <div className="card-text-tech-profile ">
+          <div className=" card card-tech border-0 shadow" style={{marginTop:20, width:375 }}>
+          <div className="card-text-img-profile ">
                 <img
                     style={{
                       width: "100%",
@@ -51,6 +30,13 @@ export default function BlogCard({title, text, image,author}) {
                     src={image}
                   />
                 </div>
+            <div className="card-body text-center">
+              <h2 className="card-title-tech mb-0">{title}</h2>
+              <div>
+                <div className="card-text-tech-profile ">
+                  <p>{text}</p>
+                </div>
+                
                 <div className="card-text-tech-summary ">
                  <h5>{author} </h5>
                 </div>

@@ -73,7 +73,7 @@ function BlogsPage({isAuth}) {
         </div>
       </form>
     </div>
-    <div className="row" >
+    <div className="col-12 col-3 row" >
     {postLists.map ((post) => (
            
         <BlogCard 

@@ -35,15 +35,15 @@ function CreatePost ({isAuth}) {
   const createPost = async () => {
     await addDoc(postsCollectionRef, {
     title, postText, postImage,  
-    author: {name: auth.currentUser.displayName, id: auth.currentUser.uid },
+    author: {name: auth.currentUser.displayName, id: auth.currentUser.uid, profileImage:auth.currentUser.photoURL  },
     
-    //  profileAvatar:auth.currentUser.photoURL }
   
       
   })
+  
     history.push("/blogspage");
   };
-
+  console.log("auth", (auth))
   useEffect(() => {
     if (!isAuth) {
       history.push("/login");

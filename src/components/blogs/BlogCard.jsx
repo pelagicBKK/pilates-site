@@ -8,7 +8,7 @@ import {   } from '@material-ui/core';
 // import stock2 from '../../images/stock-photos/stock-2.jpg';
 // import stock3 from '../../images/stock-photos/stock-3.jpg';
 
-export default function BlogCard({title, text, author, image,gmailAuthor}) {
+export default function BlogCard({title, text, author, image, avatar}) {
 
   // id, title, text, image,author,
   
@@ -41,11 +41,14 @@ export default function BlogCard({title, text, author, image,gmailAuthor}) {
                 <div className="card-text-tech-summary ">
                   
                  <h5>{author } </h5>
+                 </div>
+                 <div >
+               
                  <img
                     style={{
                  
                        
-                        bordeRadius: "50%",
+                       
                         
                         marginBottom: 25,
 
@@ -57,7 +60,7 @@ export default function BlogCard({title, text, author, image,gmailAuthor}) {
                   
                     alt="..."
                     className="img-fluid"
-                  // src={profileAvatar}
+                 src={avatar}
                   />
                 </div>
                 {/* <div >

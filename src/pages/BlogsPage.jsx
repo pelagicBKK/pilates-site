@@ -79,10 +79,12 @@ function BlogsPage() {
         <BlogCard 
         post={post}
         key={post.id}
-        id={post.id} title={post.title} 
+        id={post.id} 
+        title={post.title} 
         text={post.postText} 
         author={post.author.name}
        image={post.postImage}
+       avatar={post.author.profileImage}
         // gmailAuthor={post.author.gmailAuthor}
         
         />

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-import { Grid, Container  } from '@material-ui/core';
+import { Grid  } from '@material-ui/core';
 import BenefitsTable from "../components/BenefitsTable";
 // import svgImage10 from '../..//images/illustrations/projections.svg';
 

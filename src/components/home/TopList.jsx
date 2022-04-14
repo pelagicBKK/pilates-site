@@ -132,7 +132,8 @@ export default function LivePreviewExample() {
                   
                   options={defaultOptions}
                     height={500}
-                    width={650}
+                    width={400}
+                    
                   />
                
               </Grid>

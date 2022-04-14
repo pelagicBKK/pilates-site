@@ -1,5 +1,5 @@
 import React, { } from 'react';
-import {   } from '../../firebase-config'
+import {  } from '../../firebase-config'
 
 
 import {   } from '@material-ui/core';
@@ -8,14 +8,15 @@ import {   } from '@material-ui/core';
 // import stock2 from '../../images/stock-photos/stock-2.jpg';
 // import stock3 from '../../images/stock-photos/stock-3.jpg';
 
-export default function BlogCard({title, text, author, image }) {
+export default function BlogCard({title, text, author, image,gmailAuthor}) {
 
   // id, title, text, image,author,
   
   return (
     <div className="col mb-4"> 
         <div className="row">
-          <div className=" card card-tech border-0 shadow" style={{marginTop:20, maxWidth:"45%", minWidth:"350px",maxHeight:"65%",minHeight:"45%", padding:20, }} >
+          <div className="container" style={{ width:"450px", margin:"auto"}}>
+          <div className=" card card-tech border-0 shadow" style={{marginTop:20, width: "325px", height: "575px",  padding:20, }} >
           <div >
                 <img
                     style={{
@@ -38,8 +39,48 @@ export default function BlogCard({title, text, author, image }) {
                 </div>
                 
                 <div className="card-text-tech-summary ">
-                 <h5>{author} </h5>
+                  
+                 <h5>{author } </h5>
+                 <img
+                    style={{
+                 
+                       
+                        bordeRadius: "50%",
+                        
+                        marginBottom: 25,
+
+                     
+                      
+                      objectFit: "cover",}}
+                      // margin:100
+                      
+                  
+                    alt="..."
+                    className="img-fluid"
+                  // src={profileAvatar}
+                  />
                 </div>
+                {/* <div >
+                <img
+                    style={{
+                 
+                        width: 35,
+                        height: 35,
+                        bordeRadius: "50%",
+                        float:"left",
+                        marginBottom: 25,
+
+                     
+                      
+                      objectFit: "cover",}}
+                      // margin:100
+                      
+                  
+                    alt="..."
+                    className="img-fluid"
+                    src={gmailAuthor}
+                  />
+                </div> */}
 
                 {/* <div className="deletePost">
                   
@@ -65,6 +106,7 @@ export default function BlogCard({title, text, author, image }) {
               {/* <li class="list-group-item list-group-item-primary">{items}</li> */}
            
             </div>
+          </div>
           </div>
         </div>
       </div>

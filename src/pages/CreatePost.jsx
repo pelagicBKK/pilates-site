@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react"
 import {addDoc, collection} from 'firebase/firestore';
-import {auth, db} from '../firebase-config'
+import {auth, db, } from '../firebase-config'
 import {   } from "react-router-dom";
 import {
   
@@ -26,12 +26,21 @@ function CreatePost ({isAuth}) {
   const [title, setTitle] = useState("");
   const [postText, setPostText] = useState("");
   const [postImage, setPostImage] = useState("");
+  // const [profileAvatar, setProfileAvatar] = useState("");
+
+  
 
   const postsCollectionRef = collection(db, "posts")
   // let navigate = useNavigate();
   const createPost = async () => {
     await addDoc(postsCollectionRef, {
-    title, postText, postImage, author: {name: auth.currentUser.displayName, id: auth.currentUser.uid  }})
+    title, postText, postImage,  
+    author: {name: auth.currentUser.displayName, id: auth.currentUser.uid },
+    
+    //  profileAvatar:auth.currentUser.photoURL }
+  
+      
+  })
     history.push("/blogspage");
   };
 
@@ -41,7 +50,16 @@ function CreatePost ({isAuth}) {
     }
   }, );
 
-
+  // function countWords(str){
+  //   var count = 0;
+  //   // str=str.trim();
+  //   for (var i = 0; i <= str.length; i++) {
+  //      if (str.charAt(i) === " ") {
+  //         count ++;
+  //       }
+  //   }
+  //   return count;
+  // }
  
 
 // const CreatePostSchema = Yup.object().shape({
@@ -50,7 +68,7 @@ function CreatePost ({isAuth}) {
 
 
 
-  return <div className="createPostPage">
+  return <div className="createPostPage" style={{ marginBottom: 250}}>
    
     <div className="cpContainer">
       <h1> Create Post</h1>
@@ -69,7 +87,7 @@ function CreatePost ({isAuth}) {
          type="text"
          class="form-control" 
          id="inputError"
-         maxlength="600"
+         maxlength="240"
          row={5}
          style={{width:200, height:200}}
          
@@ -78,12 +96,14 @@ function CreatePost ({isAuth}) {
 
          
         //  style={ this.val.length === 11 ? this.val.length > 7 : "error message"}  
-        onChange={(event) => {setPostText(event.target.value);
+        onChange={(event) => {setPostText(event.target.value)}}
+        // onChange={(event) => {countWords(event.target)}}
+      
         
          
-        }}
+      
         />
-         <span class="error text-danger">Max Characters 240</span>
+         <span class="error text-danger word-counter">Max Characters 240</span>
          {/* <ErrorMessage name="postText" render={renderError} /> */}
         </div>
 
@@ -98,6 +118,15 @@ function CreatePost ({isAuth}) {
         }}
         />
         </div>
+        {/* <div className="inputGp">
+        <label>Avatar..</label>
+        <input 
+        
+        // placeholder="Image..." 
+        onChange={(event) => {setProfileAvatar(event.target.value);
+        }}
+        />
+        </div> */}
 
         <Button
         className="btn btn-outline-secondary btn-sm"

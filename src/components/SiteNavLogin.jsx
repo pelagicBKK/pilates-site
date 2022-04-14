@@ -20,11 +20,14 @@ function SiteNavLogin ({setIsAuth}){
 
   const signUserOut =() =>{
     signOut(auth)
+    
+    
     .then(() => {
       localStorage.clear();
       setIsAuth(false);
       // window.location.pathway = "/login"
     })
+    console.log(auth)
 }
     return (
       <header className="p-3 "

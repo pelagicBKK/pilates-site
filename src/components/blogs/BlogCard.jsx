@@ -2,13 +2,13 @@ import React, { } from 'react';
 import {  } from '../../firebase-config'
 
 
-import {   } from '@material-ui/core';
+import { Button  } from '@material-ui/core';
 
 // import stock1 from '../../images/stock-photos/stock-1.jpg';
 // import stock2 from '../../images/stock-photos/stock-2.jpg';
 // import stock3 from '../../images/stock-photos/stock-3.jpg';
 
-export default function BlogCard({ text, author, image, avatar, title}) {
+export default function BlogCard({ post, text, author, image, avatar, title, }) {
   // title, text, author, image, avatar
   // id, title, text, image,author,
   
@@ -66,6 +66,27 @@ export default function BlogCard({ text, author, image, avatar, title}) {
                  src={avatar}
                   />
                 </div>
+
+                <div className="deletePost">
+                  
+                  {/* {isAuth && post.author.id === auth.currentUser.uid &&
+                   (   */}
+                    <Button
+              className="btn btn-outline btn-sm"
+              type="button"
+                          onClick={() => {
+                             this.deletePost(post.id)
+                          }} 
+                        
+                          
+                        > &#128465;
+                          Delete
+                        
+                        
+                        </Button>
+                        {/* )} */}
+                        </div> 
+
                 {/* <div >
                 <img
                     style={{
@@ -88,22 +109,7 @@ export default function BlogCard({ text, author, image, avatar, title}) {
                   />
                 </div> */}
 
-                {/* <div className="deletePost">
-                  
-                {isAuth && post.author.id === auth.currentUser.uid && (  
-                  <button
-            className="btn btn-outline btn-sm"
-            type="button"
-                        onClick={(id) => {
-                          this.deletePost(id);
-                        }} 
-                      
-                        
-                      > &#128465;
-                        Delete
-                      
-                      
-                      </button>)}</div> */}
+              
 
 
                 {/* <div className="avatar-dots">...</div> */}

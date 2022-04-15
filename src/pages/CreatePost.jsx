@@ -43,7 +43,7 @@ function CreatePost ({isAuth}) {
   
     history.push("/blogspage");
   };
-  console.log("auth", (auth))
+  
   useEffect(() => {
     if (!isAuth) {
       history.push("/login");

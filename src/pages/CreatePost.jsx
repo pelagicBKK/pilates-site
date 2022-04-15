@@ -75,20 +75,23 @@ function CreatePost ({isAuth}) {
       <div className="inputGp">
         <label>Title:</label>
         <input 
-        maxLength="20"
+        // maxLength="20"
         placeholder="Title..." 
+        required="required"
         onChange={(event) => {setTitle(event.target.value);
         }}
         />
        <span class="error text-danger">Max Characters 20</span>
-        <div className="inputGp form-group has-error">
-        <label className="control-label" for="inputError"></label>
+        <div className="inputGp form-group ">
+        <label >text area</label>
         <textarea placeholder="Post..."
          type="text"
-         class="form-control" 
-         id="inputError"
+        //  class="form-control" 
+        //  className="text"
+         id="text"
          maxlength="240"
          row={5}
+         required="required"
          style={{width:200, height:200}}
          
         
@@ -112,9 +115,10 @@ function CreatePost ({isAuth}) {
         <div className="inputGp">
         <label>Image:</label>
         <input 
-        
+        required="required"
         placeholder="Image..." 
-        onChange={(event) => {setPostImage(event.target.value);
+        onChange={(event) => {setPostImage(event.target.value)
+        
         }}
         />
         </div>

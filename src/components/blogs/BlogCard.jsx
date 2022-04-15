@@ -8,8 +8,8 @@ import {   } from '@material-ui/core';
 // import stock2 from '../../images/stock-photos/stock-2.jpg';
 // import stock3 from '../../images/stock-photos/stock-3.jpg';
 
-export default function BlogCard({title, text, author, image, avatar}) {
-
+export default function BlogCard({ text, author, image, avatar, title}) {
+  // title, text, author, image, avatar
   // id, title, text, image,author,
   
   return (
@@ -40,7 +40,9 @@ export default function BlogCard({title, text, author, image, avatar}) {
                 
                 <div className="card-text-tech-summary ">
                   
-                 <h5>{author } </h5>
+                 <h5
+                 style={{fontFamily: 'Comic Sans MS'}}
+                 >@{author } </h5>
                  </div>
                  <div >
                
@@ -48,8 +50,9 @@ export default function BlogCard({title, text, author, image, avatar}) {
                     style={{
                  
                        
-                       
-                        
+                      width: 65,
+                      height: 65,
+                        borderRadius: 55,
                         marginBottom: 25,
 
                      

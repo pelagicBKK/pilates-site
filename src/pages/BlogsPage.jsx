@@ -74,12 +74,15 @@ function BlogsPage() {
       </form>
     </div>
     <div className="row row-cols-1  row-cols-md-3" >
-    {postLists.map ((post) => (
+
+   
+   { postLists.map ((post) => (
            
         <BlogCard 
-        post={post}
+        
         key={post.id}
-        id={post.id} 
+        post={post}
+     
         title={post.title} 
         text={post.postText} 
         author={post.author.name}

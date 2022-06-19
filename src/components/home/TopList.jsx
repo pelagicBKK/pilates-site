@@ -132,7 +132,7 @@ export default function LivePreviewExample() {
                   
                   options={defaultOptions}
                     height={500}
-                    width={530}
+                    width={650}
                     
                   />
                

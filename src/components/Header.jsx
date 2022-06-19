@@ -12,7 +12,7 @@ import {
   Divider
 } from '@material-ui/core';
 
-import projectLogo from '..mom/images/react.svg';
+import projectLogo from '../images/mom/react.svg';
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
 
 const LivePreviewExample = () => {

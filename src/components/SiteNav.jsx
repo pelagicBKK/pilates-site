@@ -44,7 +44,7 @@ function SiteNav ({setIsAuth}) {
             >
             
              <img
-                src="https://www.nightmarketbangkok.com/wp-content/uploads/2021/11/pelagic-Dark-black.png"
+                src="http://speechpathconsulting.com/wp-content/uploads/2022/06/momLogo.png"
                 width="65"
                 height="55"
                 // style={{paddingRight:2, marginBottom:15}}
